@@ -1,0 +1,425 @@
+/* Last edited by Lizz Bartos (lizz.bartos@u.northwestern.edu) 9/18/12 */
+
+/*
+Coffeelike by nodethirtythree + Templated.org
+Released under the Creative Commons Attribution 3.0 License.
+	
+Note from the author: These templates take quite a bit of time to conceive,
+design, and finally code. So please, support our efforts by respecting our
+license: keep our footer credit links intact so people can find out about us
+and what we do. It's the right thing to do, and we'll love you for it :)	
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------- overall page --------------- */  
+
+body {
+    margin: 0 auto;
+    /*padding: 30px;*/
+    padding: 0px 25px;
+    width: 960px;
+    position: relative;
+    background: url('images/shadow.png') top left repeat-x;
+	background: #ad8667 url('images/bg.jpg');
+    
+	color: #ebe1d9;
+    font-size: 12pt;
+	line-height: 1.75em;
+	font-family: Georgia, serif;
+}
+
+#bg { background: url('images/shadow.png') top left repeat-x; }
+
+
+
+h1,h2,h3,h4 {
+	text-transform: lowercase;
+	letter-spacing: -1px;
+}
+
+h2,h3,h4 {
+	margin-bottom: 1em;
+	font-family: Arvo, serif;
+	color: #fff;
+}
+
+a {
+	/*color: #1495ff;*/
+    color: skyblue;
+	text-decoration: underline;
+}
+
+a:hover { text-decoration: none; }
+
+p { margin-bottom: 1.5em; }
+
+ul { margin-bottom: 1.5em; }
+
+.imageList { list-style: none; }
+
+.imageList li { clear: both; }
+
+
+
+br.clear {
+	clear: both;
+}
+
+
+
+
+/* --------------- header --------------- */
+
+#header-wrap {
+	position: relative;
+	padding: 40px;
+	height: 80px;
+}
+
+/* logo == title for now */
+
+#logo {
+	position: absolute;
+	/*top: 40px;*/
+	left: 40px;
+	height: 120px;
+	/*line-height: 120px;*/
+   
+}
+
+#logo h1 {
+	font-size: 3.5em; /*3.5em;*/
+	font-family: Arvo, serif;/*Lobster, cursive;*/
+	text-shadow: 0 2px 1px #32251B;
+    padding-bottom: 5px;
+    
+}
+
+#logo a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#logo h3 {text-transform: none; }
+
+
+/* ---------- navigation ---------- */
+
+#nav {
+	position: absolute;
+    float: right;
+	right: 40px;
+	/*height: 53px;
+	line-height: 53px;*/
+	top: 73px;
+}
+
+#nav a {
+	text-decoration: none;
+	text-transform: lowercase;
+	color: lavender;
+	text-shadow: 0 1px 1px #32251B;
+	font-size: 1.2em;
+}
+#nav a:hover {
+    text-decoration: underline;
+    color: skyblue;
+    }
+
+#nav li {
+	margin: 0 1em 0 1em;
+}
+
+#nav ul {
+	list-style: none;
+}
+
+#nav ul li {
+	float: left;
+}
+
+
+
+
+/* ---------- content ----------*/
+#content {
+	position: relative;
+	padding: 0;
+	/*width: 1180px;*/
+    width: 960px;
+	color: #5e5e5e;
+}
+
+#content strong {
+	color: #3e3e3e;
+}
+
+#content a {
+	color: #242424;
+}
+
+#content h2, #content h3 {
+	color: #242424;
+}
+
+#content h4 { color: indigo; }
+
+#content ul {
+	list-style: none;
+}
+
+#content ul li {
+	padding: 15px 0 15px 0;
+	border-top: dotted 1px #b3b3b3;
+}
+
+#content ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#content ul.imageList li {
+	padding: 15px 0 15px 0;
+}
+
+
+/* --------------- left sidebar --------------- */
+
+#sidebar {
+	width: 240px;
+	float: left;
+	padding: 35px;
+	background: #231257; /* darrkk blue */ /*#32251b;*/
+	color: lavender; /*#e1d2c7; awkward beige?*/
+}
+
+#sidebar a {
+	color: #e2e0df;
+}
+
+#sidebar h2, #sidebar h3, #sidebar h4 {
+	color: #fff;
+}
+
+#sidebar ul {
+	list-style: none;
+}
+
+#sidebar ul li {
+	padding: 15px 0 15px 0;
+	border-top: dotted 1px #70665f;
+}
+
+#sidebar ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+
+/* --------------- main --------------- */
+
+#main {
+	width: 560px; /*745px;*/
+	margin: 0 0 0 330px; /*355*/
+	/*padding: 40px;*/
+    padding: 35px;
+	background: #fff;
+}
+
+
+
+#box1 {
+	width: 560px; /*745px;*/
+	overflow: hidden;
+	margin: 0 0 35px 0;
+}
+
+#box1img {
+    float: left;
+    margin: 5px 20px 20px 0;
+    width: 130px;
+    height: 160px;
+    background-image: url(images/pic1.jpg);
+}
+
+/*<img class="left" src="images/pic1.jpg" width="130" height="160" alt="">*/
+
+#box2 {
+	/*width: 355px;*/
+    width: 200px;
+	overflow: hidden;
+	float: left;
+}
+
+.introImg {
+	float: left;
+	margin: 5px 20px 20px 0;
+    height: 55px;
+    width: 55px;
+}
+
+#box2img1 { background-image: url(images/pencil.png); }
+
+#box2img2 { background-image: url(images/happyfolks.png); }
+
+#box2img3 { background-image: url(images/briefcase.png); }
+
+#box3 {
+	/*width: 355px;*/
+    padding: 0px 20px;
+    width: 315px;
+    height: 500px;
+	overflow: hidden;
+	/*margin: 0 0 0 390px;*/
+}
+
+
+/* ----- home page ----- */
+
+#articles {
+	/*width: 355px;*/
+    width: 200px;
+	overflow: hidden;
+	/*margin: 0 0 0 390px;*/
+}
+
+#articles a { color: teal; }
+
+
+/* ----- about ----- */
+
+
+/* ----- board ----- */
+
+
+/* ----- contact ----- */
+
+
+/* ----- scholarships ----- */
+
+/*#box1-scholarships*/
+#scholarships {
+	/*width: 745px;*/
+	overflow: hidden;
+	margin: 0 0 35px 0;
+}
+
+#scholarships h3 {
+	color: indigo;
+}
+
+.companyIcon {
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    margin: 5px 20px 20px 0;
+    padding: 0px 0 0px 0;
+    height: 80px;
+    width: 80px;
+}
+
+#scholarships p.desc {
+    font-size: 10.5pt;
+    color: gray;
+    /*font-style: italic;*/
+}
+
+
+
+
+#americanExpressIcon { background-image: url(images/americanexpress.jpg); }
+
+#dowIcon { background-image: url(images/dowcorning.jpg); }
+
+#googleIcon { background-image: url(images/google.jpg); }
+
+#microsoftIcon { background-image: url(images/microsoft.jpg); }
+
+#emcIcon { background-image: url(images/emc.jpg); }
+
+#vanguardIcon { background-image: url(images/vanguard.jpg); }
+
+#sweIcon { }
+
+#boeingIcon {
+    background-image: url(images/boeing.jpg);
+    /*background-repeat: no-repeat;
+    display: block;
+    float: left;
+    margin: 5px 20px 20px 0;
+    padding: 0px 0 0px 0;
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    min-height: 80px;*/
+}
+
+
+
+/*
+#extraDiv1 {
+	background: transparent url(cr2.gif) top left no-repeat; 
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}*/
+
+
+
+/* --------------- footer/copyright --------------- */
+
+#copyright {
+	padding: 0 0 80px 0;
+	text-align: center;
+	color: lavender; 
+    font-size: 11px;
+}
+
+#copyright a {
+	color: lavender; /*#D8C2AB;=brownish yuck*/
+}
+
+#footer {
+	position: relative;
+	padding: 40px;
+	width: 960px;
+	color: lavender; /*#e1d2c7; awkward beige?*/
+}
+
+#footer a {
+	color: #f4eeea;
+}
+
+#footer h2, #footer h3, #footer h4 {
+	color: #f4eeea;
+}
+
+#footer ul {
+	list-style: none;
+}
+
+#footer ul li {
+	padding: 15px 0 15px 0;
+	border-top: dotted 1px #c6aa95;
+}
+
+#footer ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#footerContent {
+	width: 745px;
+	margin: 0 0 0 355px;
+}
+
+#footerSidebar {
+	width: 240px;
+	float: left;
+}

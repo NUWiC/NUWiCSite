@@ -1,0 +1,130 @@
+Page requirements:
+	- responsive
+		- displays well on mobile devices (tablets/phones)
+		- use Bootstrap 3/Foundation 4 for existing content
+	- aesthetically appealing
+		- flat, geometric buttons, tile-like
+		- use vector graphics (look good on HD displays)
+		- use console type for headers (Consolas?) and sans-serif for other text
+		- look into CS related images/backgrounds
+		- minimal white space
+		- look into a one-page layout, used more often these days <http://onepagelove.com/>
+	- code guidelines
+		- when using CSS templates, remove any unnecessary code
+		- comment everything for maintainability
+		- look into nanoc/ruby for development
+	- example pages
+		- CMU
+			http://women.cs.cmu.edu/
+			http://women.cs.cmu.edu/ada/
+		- UPenn
+			http://pennwics.herokuapp.com/
+		- RIT
+			http://www.women.rit.edu/
+			http://www.women.rit.edu/scholarships
+		- Princeton PWiCS
+			http://princetonwics.wordpress.com/ - new
+			https://sites.google.com/site/princetonwics/ - old
+		- Princeton Gwise + NYU WinC
+			http://cims.nyu.edu/~wincweb/HS/index2012.html 
+		- Rutgers
+			http://wcs.rutgers.edu/
+		- Michigan State 
+			http://www.cse.msu.edu/msuwic/
+		- Ohio State
+			http://acmw.org.ohio-state.edu/
+			http://www.cse.ohio-state.edu/diversity/
+		- U of Oregon
+			http://www.cs.uoregon.edu/groups/wics/
+		- UIUC
+			https://wiki.engr.illinois.edu/display/wcs/Home;jsessionid=CCD54BA7EB6EDBC0B7D0E89F93CFE218
+		- UT Austin
+			http://www.cs.utexas.edu/~wics/
+		- Harvard
+			http://www.hcs.harvard.edu/~harvardwomenincs/
+			http://www.hcs.harvard.edu/~harvardwomenincs/sponsor.php
+			https://www.facebook.com/HarvardWICS
+		- Stanford
+			http://www.stanford.edu/group/wics/cgi-bin/wordpress/
+			http://sheplusplus.stanford.edu/
+		- CU Boulder  -ACM-W
+			http://wic.cs.colorado.edu/
+		- UW Seattle ACM-W
+			http://www.cs.washington.edu/acmw/
+			http://www.cs.washington.edu/outreach/
+			https://www.cs.washington.edu/outreach/k12/
+			http://www.engr.washington.edu/curr_students/studentprogs/wise.html - WiSE
+			https://www.cs.washington.edu/diversity/
+		- Harvey Mudd links
+			http://www.cs.hmc.edu/resources/women
+		- West Chester University [???]
+			http://wincsc.wordpress.com/
+			http://wincsc.wordpress.com/2012/03/03/real-time-code-editor/
+		- U of Arizona
+			http://www.cs.arizona.edu/wics/
+		- UW Tacoma
+			http://students.washington.edu/wics/
+			https://tacoma.collegiatelink.net/organization/wics
+		- NYU WinC
+			http://cs.nyu.edu/~wincweb/
+			http://cs.nyu.edu/webapps/content/other/student_orgs
+		- Columbia University
+			http://www.cs.columbia.edu/wics/
+		- Movements/national
+			http://sitwithme.org/
+			http://leanin.org/
+			http://staywithit.org/ - by ASEE
+			https://www.facebook.com/CSEdWeek - Computer Science Education Week
+			http://women.acm.org/
+			http://www.ncwit.org/ -- https://www.aspirations.org/
+			http://www.iwt.org/
+			http://www.awc-hq.org/home.html
+			http://www.nsf.gov/statistics/ - NC fo S and E stats Women, Minorities, and Persons with Disabilities in Science and Engineering: Data Update
+			http://www.aauw.org/who-we-are/
+			http://www.witi.com/
+			http://www.cwit.umbc.edu/
+
+Content:
+	- Opportunities page
+		- scholarships, internships, grants, conferences, etc.
+		- sorting ability, company of type of opp?
+		- examples
+			- Bold
+			- Microsoft Explore
+			- Anita Borg
+			- Vanguard (on hold) 
+			- NCWit
+			- GHC
+			- squareup
+			- hackerschool
+			- etsy hacker grants
+		- about WiC
+			- keep mission statement
+			- space for infographic (waiting in info from jeff)
+			- update stats under "Why WiC?" and make them more visible
+			- how do I become a member of WiC?
+				- Easy signup for listserv
+			- E-board members
+				- look into embedding FB Profile pictures
+			- E-board alums
+		- calendar
+			- figure out a better way to display our events
+			- add academic info to calendar
+		- sponsor page (See Harvard's)
+		- update contact info
+		- link social media (Twitter/FB) and allow following from our page
+		- Links to other NU computer societies
+			- HackNU
+			- IEEE
+		- Links to NU projects
+			- ctrlftech.com
+		- resources for people new to EECS
+		
+			
+		
+			
+			
+			
+			
+
+	

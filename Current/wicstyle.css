@@ -1,0 +1,739 @@
+@charset "UTF-8";
+
+/* Modified from
+<!-- ............................. -->
+<!-- ............................. -->
+<!-- ..... LIQUID GEM V.1.0. ..... -->
+<!-- ............................. -->
+<!-- .... MADE BY CHRIS BIRON .... -->
+<!-- ............................. -->
+<!-- Liquid Gem is licensed under 
+          Creative Commons 
+ Attribution-NonCommercial-ShareAlike
+       3.0 Unported License -->
+<!-- ............................. -->
+<!-- ............................. -->
+*/
+
+
+/* ----------------- Reset all styles ----------------- */
+*{
+	margin:0 auto; /* 0 */
+	padding:0;
+	border:0;
+	max-width: 999px; /* trying to play with this to get #work centering right...*/
+}
+
+/* ----------------- Website background and general text colour ----------------- */
+body{
+	background-image:url(images/backgroundtexture.png);
+	background-color:#f9f9f9;
+	color:#2d2d2d;
+	
+}
+
+h3 {text-transform: lowercase; }
+h4 {text-transform: lowercase; }
+
+/* ----------------- Wrapper - keeps all content in the center of page -----------------  */
+.wrapper{
+	margin:auto;
+	width:80%;
+	height:auto;
+}
+
+
+/* The rest is pretty self explanatory 
+- it appears in the order that it occurs on the HTML document */
+#top{
+	/*height:40px;*/
+}
+
+#logo{
+	margin-top: 15px; /*5%;*/
+	text-decoration:none;
+}
+
+#logoimage{
+	/*width:27px;
+	padding-right:10px;*/
+	width: 125px;
+	float:left;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin: 0px;
+}
+
+#logotitle{
+	float:left;
+	font-weight:normal;
+	text-shadow: 0 1px 1px #FFF;
+	/*font-family:Cookie, Helvetica, sans-serif;*/
+	
+	font-family:Lato, Helvetica, Arial, sans-serif;
+	font-size: 13pt; /*font-size:215%;*/
+	width: 180px;
+	/*padding-left: 10px;
+	margin-top: 20px;*/
+}
+
+#logotitle a{
+	color:#2d2d2d;
+	text-decoration:none;
+}
+
+
+
+nav{
+	float:right;
+	width:400px;
+	display:block;
+	height:40px;
+}
+
+nav ul li{
+	display:block;
+	width:25%;
+	float:left;
+	text-align:center;	
+}
+
+nav ul li a{
+	font-family:Lato, Helvetica, Arial, sans-serif;
+	width:90%;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:400;
+	line-height:250%;
+	display:block;
+	color:#2d2d2d;
+}
+
+nav ul li a:hover{
+	color: deepskyblue; /*#f38094;*/
+}
+
+nav ul li p{
+	font-family:Lato, Helvetica, Arial, sans-serif;
+	width:90%;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:400;
+	line-height:250%;
+	display:block;
+	color:#f38094;
+}
+
+/* added stuff */
+#logo a {
+    text-decoration: none;
+    color: #fff;
+}
+#logo-subtitle { text-transform: none; }
+.navlinks {
+    text-transform: lowercase;
+    display: inline-block;
+    color: indigo;
+}
+/* end added */
+
+
+hr{
+	height:1px;
+	width:100%;
+	background-color:indigo; /*#2d2d2d;*/
+	margin:3% 0;
+}
+
+header{
+	width:100%;
+	margin:5% 0 5% 0;
+}
+
+header h1{
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:140%;
+	font-weight:normal;
+	letter-spacing:1px;
+	margin-bottom:1%;
+}
+
+header h1 span{
+	color:indigo; /*#f38094;*/
+	text-shadow: 0 1px 1px #dadada;
+}
+
+header h2{
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:100%;
+	font-weight:normal;
+}
+	
+#slideshow{
+	width:100%;
+	margin-top:2%;
+}
+
+
+/* - - - - - - - - - - - - - - -  Slider START  - - - - - - - - - - - - - - - */
+
+.html_carousel {
+}
+.html_carousel div.slide {
+	position: relative;
+}	
+.html_carousel div.slide img {
+	width: 100%;
+	height: auto;
+	-webkit-box-shadow: 0 1px 1px #c1c1c1;
+    -moz-box-shadow: 0 1px 1px #c1c1c1;
+    box-shadow: 0 1px 1px #c1c1c1;
+	border-radius:15px;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+/* - - - - - - - - - - - - - - -  Slider END  - - - - - - - - - - - - - - - */
+
+.left, .right {
+	margin-top:4%;
+	width:48%;
+	float:left;
+	margin-bottom:2%;
+}
+
+.left { float: left; }
+
+.right { float:right; }
+
+.center h3, .main h3, .left h3, .right h3{
+	font-family: Arvo, Courier, serif;
+	font-size:1.1em;
+	/*font-family: Arvo, Cookie, Arial, Helvetica, sans-serif;
+	font-size:180%;*/
+	font-weight:normal;
+	text-align:center;
+	color:indigo; /*#f38094;*/
+	margin-bottom:5%;
+	text-shadow: 0 1px 1px #dadada;
+
+	text-transform: capitalize;
+	
+}
+.main div h2{
+	font-family: Arvo, Courier, serif;
+	font-size:1.1em;
+	font-weight:normal;
+	text-align:left;
+	color:indigo; /*#f38094;*/
+	text-shadow: 0 1px 1px #dadada;
+	text-transform: capitalize;
+}
+
+.center h3, .main h3 { 
+	text-align: left;
+	margin-bottom: 10px;
+}
+#h2_link{
+	text-transform: lowercase;
+}
+
+.main p, .right p, .left p{
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:140%;
+}
+#main_paragraph p{
+	margin-top: 1%;
+}
+#p_img{
+	width: 120px;
+	height: 100px;
+}
+#gracehopper_img{
+	width: 150px;
+	height: 170px;
+}
+
+.main div p a{
+	text-decoration: none;
+}
+.main div p a:hover{
+	color: deepskyblue;
+}
+
+.f_left{
+	width: 20%;
+	float: left;	
+}
+.f_right{
+	
+}
+.left p a{
+	color:indigo; /*#f38094;*/
+	text-decoration:none;
+}
+
+.right p a{
+	color:indigo; /*#f38094;*/
+	text-decoration:none;
+}
+	
+
+
+.main p { padding-top: 0px;}
+
+.item-image {
+	width: 55px;
+	height: 55px;
+	background-color: pink;
+	max-width: 55px;
+	max-height: 55px;
+}
+
+#academic { background-image: url(images/pencil.png); }
+#social { background-image: url(images/happygroup.png); }
+#preprofessional { background-image: url(images/briefcase.png); }
+
+
+/* ----------------------- WORK LINKS START ------------------------- */
+#work{
+	width:800px;
+	margin: 3% auto 3% auto;
+}
+
+.item{
+	border-radius:15px;
+	width:150px;
+	height:155px;
+	background-color:#FFF;
+	margin:10px;
+	float:left;
+	-webkit-box-shadow: 0 1px 3px #c3c3c3;
+    -moz-box-shadow: 0 1px 3px #c3c3c3;
+    box-shadow: 0 1px 3px #c3c3c3;  
+	overflow:hidden;
+	-webkit-transition: box-shadow 0.2s ease-in-out;
+	-moz-transition: box-shadow 0.2s ease-in-out;
+	-o-transition: box-shadow 0.2s ease-in-out;
+	-ms-transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+.item:hover{
+	-webkit-box-shadow: 0 0 8px indigo, 0 0 8px indigo; /*0 0 8px #f38094, 0 0 8px #f38094;*/
+    -moz-box-shadow: 0 0 8px indigo, 0 0 8px indigo; /*0 0 8px #f38094, 0 0 8px #f38094;*/
+    box-shadow: 0 0 8px indigo, 0 0 8px indigo; /*0 0 8px #f38094, 0 0 8px #f38094;*/
+}
+	
+
+.item img{
+	display:block;
+	width:100%;
+	-webkit-box-shadow: 0 2px 1px #c3c3c3;
+    -moz-box-shadow: 0 2px 1px #c3c3c3;
+    box-shadow: 0 2px 1px #c3c3c3;
+	border-radius:15px 15px 0 0;
+	opacity:0.8;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	
+}
+
+.item img:hover{
+	opacity:1;
+}
+
+
+.item h3{
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:105%;
+	font-weight:normal;
+	/*padding:5px 0 0 8px;*/
+	color:#2d2d2d;
+	text-decoration:none;
+
+	padding-top: 5px;
+	text-align: center;
+}
+
+.item a{
+	text-decoration:none;
+	color:#2d2d2d;
+}
+
+.item p{
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:70%;
+	font-weight:normal;
+	padding:0 0 0 8px;
+	color:#f38094;
+	text-decoration:none;
+	
+}
+/* ----------------------- WORK LINKS END ------------------------- */
+
+
+#bottom h3{
+	margin:4% 0 3% 0;
+	font-family:Cookie, Arial, Helvetica, sans-serif;
+	font-size:190%;
+	font-weight:normal;
+	text-align:center;
+	color:indigo; /*#f38094;*/
+	text-shadow: 0 1px 1px #c1c1c1;
+
+	font-family: Arvo, Courier, serif;
+}
+
+
+footer{
+	width:100%;
+	padding:10px 0;
+	background-color: #D0D4E2; /*#9A9C9F; /*#231257;*/ /*#2d2d2d;*/
+	/*color: lavender;*/
+}
+
+.icon{
+	float:right;
+	width:32px;
+	/*margin:95px 0 2px 4%;*/
+	opacity:0.85;
+
+	margin: 4px;
+}
+
+.icon:hover{
+	opacity:1;
+}
+
+.social{
+	color:#f38094;
+}
+
+
+/* ----------------------------- FORM ----------------------------------- */
+
+.left h4, .right h4{
+	font-family:Cookie, Arial, Helvetica, sans-serif;
+	font-size:180%;
+	font-weight:normal;
+	color:indigo; /*#f38094;*/
+	margin-bottom:10px;
+
+	font-family: Arvo, Courier, serif;
+	font-size:1.1em;
+}
+
+/*footer{ background-color: #9A9C9F; D0D4E2*/
+/*.contact { color: lavender;}*/
+footer{ background-color: #ccc; }
+.contact { color: black; }
+
+#logosponsor{
+	/*background-color: #E0E0E0;*/
+	height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+#logoncwit{
+	width: 100px;
+	height: 70px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+#logoboeing{
+	width: 180px;
+	height: 70px;
+	padding-right: 20px;
+}
+
+#logomccormick{
+	width: 500px;
+	height: 70px;
+}
+
+/*
+#formwrap{
+	width:100%;
+}
+
+.formstyle { 
+	border: 1px solid #ccc;
+	color: #000;
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	width: 95%;
+	background-color:rgba(255,255,255,1);
+	background-image:url(../images/backgroundtexture.png);
+	margin-bottom:10px;
+	opacity:0.9;
+	padding:3px;
+	-webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+   border-radius:2px;
+}
+
+.formstyletwo { 
+	color: #FFF;
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	text-align:left;
+	width:20%;
+	background-color:#2d2d2d;
+	border:0px;
+	
+}
+
+.formstyletwo:hover { 
+	color:#f38094;
+	cursor:pointer;
+
+}
+
+textarea{ 
+	border: 1px solid #ccc;
+	color: #000;
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	width:95%;
+	height:80px;
+	background-color:rgba(255,255,255,1);
+	background-image:url(../images/backgroundtexture.png);
+	margin-bottom:10px;
+	border-radius:2px;
+	padding:3px;
+	opacity:0.9;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+
+input:focus, input.focused, textarea:focus, textarea.focused {  color: #3e3e3e; opacity:1;}
+
+#error{
+	color:#FF7471;
+	float:left;
+	font-family:Regular, Arial, Helvetica, sans-serif, "Helvetica Neue Light";
+	font-size:15px;
+}
+
+#error ul{
+	list-style-type: none;
+	padding-top:5px;
+}
+	
+*/
+/* -- Make the highlight colours pretty -- */
+::selection      { background: lavender; /*background:#f38094; color:#FFF;*/}
+::-moz-selection  { background: lavender; /*background:#f38094; color:#FFF;*/}
+
+
+.center {margin: 0 auto;}
+
+/* ---------------------- RESPONSIVE STUFF - ONLY TOUCH IF YOUR'E CONFIDENT WITH CSS ---------------------- */
+
+
+@media only screen and (max-width: 1279px) {
+	.wrapper{
+		width:90%;
+	}
+	.item{
+		width:136px;
+		height:140px;
+		margin:7px;
+		/*
+		width:164px;
+		height:170px;
+		margin:8px;
+		*/
+		width:116px;
+		height:121px;
+		margin:7px;
+	}
+	.item h3{
+		font-size:75%;
+	}
+	
+	.item p{
+		font-size:40%;
+	}
+	
+}
+
+@media only screen and (max-width: 1105px) {
+	
+	#work{
+		width:900px;
+}
+
+	.item{
+		width:136px;
+		height:140px;
+		margin:7px;
+		/*
+		width:164px;
+		height:170px;
+		margin:8px;
+		*/
+		width:116px;
+		height:121px;
+		margin:7px;
+	}
+}
+
+@media only screen and (max-width: 999px) {
+	
+	#work{
+		width:750px;	
+}
+
+	.item{
+		width:116px;
+		height:121px;
+		margin:7px;
+		/*
+		width:136px;
+		height:144px;
+		margin:7px;
+		*/
+	}
+	
+	.item h3{
+		/*font-size:90%;*/
+	}
+	
+	.item p{
+		/*font-size:60%;*/
+	}
+}
+
+@media only screen and (max-width: 835px) {
+	
+	#work{
+		width:650px;	
+}
+
+	.item{
+		width:116px;
+		height:121px;
+		margin:7px;
+	}
+	
+	.item h3{
+		font-size:75%;
+	}
+	
+	.item p{
+		font-size:40%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	header h1{
+		font-size:110%;
+	}
+	
+	header h2{
+		font-size:80%;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	
+	#logo{
+		width:150px;
+		display:block;
+		margin:auto;
+		margin-bottom:5%;
+	}
+	
+	nav{
+		width:100%;
+	}
+	
+	header h1{
+		font-size:100%;
+		margin-bottom:5%;
+	}
+	
+	header h2{
+		font-size:60%;
+	}
+	
+	.left{
+		width:100%;
+	}
+	
+	.right{
+		width:100%;
+	
+	}
+	
+	#work{
+		width:460px;	
+}
+
+	.item{
+		width:116px;
+		height:121px;
+		margin:7px;
+		/*width:210px;
+		height:215px;
+		margin:10px;*/
+	}
+	
+	.item h3{
+		/*font-size:130%;*/
+	}
+	
+	.item p{
+		/*font-size:90%;*/
+	}
+	
+}
+
+@media only screen and (max-width: 510px) {
+	
+	#work{
+		width:300px;	
+	}
+
+	.item{
+		width:136px;
+		height:140px;
+		margin:7px;
+
+		width:116px;
+		height:121px;
+		margin:7px;
+	}
+	
+	.item h3{
+		font-size:75%;
+	}
+	
+	.item p{
+		font-size:40%;
+	}
+}
+
+
+	
+	
