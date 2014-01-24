@@ -1,3 +1,6 @@
+/* from the beautiful drifty.com ... temporarily until we make our own */
+
+
 /* TODO: Switch the names of these files over to ProximaNova_Bold */
  @font-face {font-family: 'ProximaNova-Bold';src: url('https://jetstrap-site.s3.amazonaws.com/webfonts/23BAC1_2_0.eot');src: url('https://jetstrap-site.s3.amazonaws.com/webfonts/23BAC1_2_0.eot?#iefix') format('embedded-opentype'),url('https://jetstrap-site.s3.amazonaws.com/webfonts/23BAC1_2_0.woff') format('woff'),url('https://jetstrap-site.s3.amazonaws.com/webfonts/23BAC1_2_0.ttf') format('truetype');}
 
@@ -464,18 +467,25 @@ h3 {
 
 
 #logo {
-  background: url('./images/logo.png') no-repeat transparent;
+  background: url('./images/logo-med.png') no-repeat transparent; /* logo */
+  height: 130px;
+  width: 210px;
+  /*
+  height: 185px;
+  width: 300px;
   /*width: 100px;
-  height: 43px;*/
+  height: 43px;
+  height: 100px;
+  width: 100px;*/
   display: inline-block;
-  margin-bottom: 10%;
+  /*margin-bottom: 10%;*/
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5), only screen and (-webkit-min-device-pixel-ratio : 2), only screen and (min-device-pixel-ratio : 2) {
 
   #logo {
-    background: url('http://drifty.com/pieces/drifty-logo@2x.png') no-repeat transparent;
-    background: url('./images/logo.png') no-repeat transparent;
+    /*background: url('http://drifty.com/pieces/drifty-logo@2x.png') no-repeat transparent;*/
+    /*background: url('./images/logo.png') no-repeat transparent;*/
     /*background-size: 100px 43px;*/
   }
 }
@@ -546,6 +556,7 @@ h3 {
 #wrapper {
   padding: 40px 20px 80px 20px;
   text-align: center;
+  padding-top: 10px;
 }
 @media only screen and (min-width : 320px) and (max-width : 600px) {
   #wrapper {
