@@ -542,17 +542,6 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 #wrapper {
   padding: 40px 20px 80px 20px;
   text-align: center;
@@ -615,7 +604,7 @@ h3 {
 
 #academic-logo {
   background: url('http://drifty.com/pieces/codiqa_drifty.png') no-repeat transparent;
-  background: url('./images/corp_logos/boeing-logo.jpg') no-repeat transparent;
+  background: url('./images/corp_logos/boeing-logo.png') no-repeat transparent;
 }
 #social-logo {
   background: url('http://drifty.com/pieces/jetstrap_drifty.png') no-repeat transparent;
@@ -628,13 +617,16 @@ h3 {
 }
 
 #boeing-logo {
-  background: url('./images/corp_logos/boeing-logo.jpg') no-repeat transparent;
+  background: url('./images/corp_logos/boeing-logo.png') no-repeat transparent;
 }
 #ncwit-logo {
-  background: url('./images/corp_logos/ncwit.png') no-repeat transparent;
+  background: url('./images/corp_logos/ncwit.png') no-repeat transparent center;
 }
 #mccormick-logo {
   background: url('./images/corp_logos/McC_Purple.png') no-repeat transparent;
+}
+#avantcredit-logo {
+  background: url('./images/corp_logos/avantcredit-logo-custom-sm.png') no-repeat transparent;
 }
 
 #twitter-logo {
@@ -642,13 +634,9 @@ h3 {
   width: 18px;
   height: 18px;
 }
-#gplus-logo {
+/* fix!!! */
+#facebook-logo {
   background: url('http://drifty.com/pieces/gplus.png') no-repeat transparent;
-  width: 18px;
-  height: 18px;
-}
-#drib-logo {
-  background: url('http://drifty.com/pieces/dribble.png') no-repeat transparent;
   width: 18px;
   height: 18px;
 }
@@ -680,7 +668,7 @@ h3 {
   }
 
   #boeing-logo {
-  background: url('./images/corp_logos/boeing-logo.jpg') no-repeat transparent;
+  background: url('./images/corp_logos/boeing-logo.png') no-repeat transparent;
 }
 #ncwit-logo {
   background: url('./images/corp_logos/ncwit.png') no-repeat transparent;
@@ -694,12 +682,9 @@ h3 {
     background: url('http://drifty.com/pieces/twitter@2x.png') no-repeat transparent;
     background-size: 18px 18px;
   }
-  #gplus-logo {
+  /* fix !! */
+  #facebook-logo {
     background: url('http://drifty.com/pieces/gplus@2x.png') no-repeat transparent;
-    background-size: 18px 18px;
-  }
-  #drip-logo {
-    background: url('http://drifty.com/pieces/dribble@2x.png') no-repeat transparent;
     background-size: 18px 18px;
   }
 }
