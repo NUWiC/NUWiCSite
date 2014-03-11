@@ -27,6 +27,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
 
+<!--link rel="stylesheet" href="sitemod.css"--> 
+
 <!-- title bar title-->
 <title> WiC | Women.in.Computing | Northwestern University </title>
 
@@ -36,8 +38,9 @@ padding-top: 0;
 padding-bottom: 0;
 background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images/tweed.gif") repeat 0 0;
 }
-
-</style>
+    .social {color: indigo}
+    
+  </style>
 
 
   <!-- script ga.js></script> -->
@@ -185,14 +188,19 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
       <div class="navbar">
         <div class="container">
           <div class="navbar-right">
-            <div class="phone-number">
+            <!--div class="phone-number">
               <a href="tel:+18003409194">
                 <i class="fa fa-phone"></i>1-800-340-9194</a>
-            </div>
-            <a class="btn btn-muted btn-login" href="">
+            </div-->
+            <a href="http://fb.com/nuwic" title="fb.com/nuwic" target="_blank"><span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x social"></i> <i class="fa fa-facebook fa-stack-1x fa-inverse"></i> </span> 
+            </a>
+
+            <a href="http://twitter.com/nuwic" title="@nuwic twitter" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x social"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
+            </a>
+            <!--a class="btn btn-muted btn-login" href="">
               <i class="icon-chevron-right"></i>Log In</a>
             <a class="FancyIframe NoBorder  btn btn-success btn-free-acct ab-ninja-link-true" data-width="600" data-height="530" href="">
-              <i class="icon-user"></i>Free Account</a>
+              <i class="icon-user"></i>Free Account</a-->
             <a href="" class="navbar-toggle" data-toggle="navbar">
               <i class="fa fa-bars"></i>
             </a>
@@ -507,91 +515,94 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
                 <h3>Resources</h3>
                 <ul class="list-unstyled list-resources">
                   <li>
-                    <a href="" target="_blank">Determining Sample Size: How to Ensure You Get the Correct Sample Size</a>
+                    <a href="" target="_blank">Resource 1</a>
                   </li>
                   <li>
-                    <a href="" target="_blank">Why do People Participate as Respondents in a Survey?</a>
+                    <a href="" target="_blank">Resource 2</a>
                   </li>
                   <li>
-                    <a href="" target="_blank">Online Surveys 101: How to Collect Valuable Insights With an Online Survey</a>
+                    <a href="" target="_blank">Resource 3</a>
                   </li>
                   <li>
-                    <a href="" target="_blank">Ebook: A Guide to Using Qualtrics Research Suite</a>
+                    <a href="" target="_blank">Resource 4</a>
                   </li>
                   <li>
-                    <a href="" target="_blank">Survey Questions 101: Do You Make any of These 7 Question Writing Mistakes?</a>
+                    <a href="" target="_blank">Resource 5</a>
                   </li>
                 </ul>
               </div>
               <div class="col-sm-4">
-                <h3>Case Studies</h3>
+                <h3>Sponsors</h3>
                 <ul class="list-unstyled list-case-studies">
                   <li>
-                    <a href="" target="_blank">
-                      <img src="./files/logo-belkin.gif" alt="Belkin" style="width: 60%;">
+                    <a href="http://www.avantcredit.com/" target="_blank">
+                      <!--div id="avantcredit-logo"></div-->
+                      <!--img src="./images/corp_logos/avantcredit-logo-custom-sm.png"alt="AvantCredit"-->
+                      <img src="./sponsors/logo-avantcredit.png">
                     </a>
                   </li>
                   <li>
                     <a href="" target="_blank">
-                      <img src="./files/logo-brown-forman.gif" alt="Brown-Forman" style="width: 80%;">
-
+                      <!--div id="mccormick-logo"></div-->
+                      <!--img src="./images/corp_logos/McC_Purple.png"-->
+                      <!--img src="http://swe.mccormick.northwestern.edu/images/McC_Gray.png"-->
+                      <img src="./sponsors/logo-mccormick.png">
                     </a>
                   </li>
                   <li>
                     <a href="" target="_blank">
-                      <img src="./files/logo-cricket.png" alt="Cricket">
-                      <!--
-								<ul>
-									<li>25% increase in research volume</li>
-									<li>40% decrease in research costs</li>
-								</ul>
-								-->
+                      <!--img src="./images/corp_logos/boeing-logo.png" alt="Boeing"-->
+                      <img src="./sponsors/logo-boeing.jpg">
                     </a>
                   </li>
                   <li>
                     <a href="" target="_blank">
-                      <img src="./files/logo-fordham-university.gif" alt="Fordham University" style="width: 80%;">
-                      <!--
-								<ul>
-									<li>Standardized on university-wide solution</li>
-									<li>Results within hours, not weeks</li>
-								</ul>
-								-->
+                    <a href="http://www.ncwit.org/programs-campaigns/ncwit-awards/ncwit-student-seed-fund/previous-ncwit-student-seed-fund-winners" target="_blank">
+                      <!--img src="./images/corp_logos/ncwit.png" alt="NCWIT"->
+                      <!--div id="ncwit-logo"></div-->
+                      <img src="./sponsors/logo-ncwit.jpg">
                     </a>
                   </li>
-                  <li>
+                  <!--li>
                     <a href="" target="_blank">
                       <img src="./files/logo-big-red-rooster.gif" alt="Big Red Rooster" style="width: 80%;">
                     </a>
-                  </li>
+                  </li-->
                 </ul>
               </div>
+
+
+
+
+
+
               <div class="col-sm-4">
                 <h3>News</h3>
                 <ul class="list-unstyled list-news">
                   <li>
-                    <a href="" target="_blank">
-                      <p>Quirks: How a one-woman insights function changed a company's view of research</p>
+                    <a href="http://www.eecs.northwestern.edu/in-the-media/469-wic-students-attend-grace-hopper-celebration-for-women-in-computing" target="_blank">
+                      <p>NU WiC Attends Grace Hopper Celebration for Women in Computing</p>
+                      <!-- http://obsolete.eecs.northwestern.edu/the-news/2082-wic-students-attend-grace-hopper-celebration-for-women-in-computing.html-->
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank">
-                      <p>Fast Company: Getting Customer Feedback Better, Faster, and Cheaper</p>
+                    <a href="http://obsolete.eecs.northwestern.edu/resources/events-calendar/icalrepeat.detail/2013/04/09/841/-/wic-presents-screening-of-she-the-documentary.html" target="_blank">
+                      <p>WiC Presents: Screen of She++ Documentary</p>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank">
-                      <p>Silicon Republic: Qualtrics CEO Ryan Smith: ‘the most important data is the data we don’t have’</p>
+                    <a href="http://obsolete.eecs.northwestern.edu/resources/events-calendar/icalrepeat.detail/2013/02/18/774/-/sandwiches-and-casual-advising-with-women-in-computer-science-wic.html" target="_blank">
+                      <p>Sandwiches and Casual Advising with NU WiC</p>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank">
-                      <p>InformationWeek: Qualtrics Dominates Academic Survey Research</p>
+                    <a href="http://obsolete.eecs.northwestern.edu/resources/events-calendar/icalrepeat.detail/2013/01/24/718/-/wic-women-in-computing-info-sessions-with-microsoft.html" target="_blank">
+                      <p>Women in Computing: Info Sessions with MicroSoft</p>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank">
-                      <p>TechCrunch: Qualtrics Raises $70M From Accel And Sequoia: “The Biggest Software Company You Haven’t Heard Of”?</p>
+                    <a href="http://obsolete.eecs.northwestern.edu/the-news/1683-undergrads-bartos-and-alsanea-found-women-in-computing-receive-seed-grant.html" target="_blank">
+                      <p>Women In Computing Receives NCWIT Seed Grant</p>
                     </a>
                   </li>
                 </ul>
@@ -655,6 +666,7 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
             </ul>
           </div>
           <!-- Footer Nav -->
+          <!--
           <ul class="row list-unstyled footer-links">
             <li class="active active col-sm-3 col-md-2 menu-item-products menu-parent">
               <h4>Products</h4>
@@ -724,6 +736,7 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
               </ul>
             </li>
             -->
+            <!--
             <li class="col-sm-3 col-md-2 menu-item-company menu-parent">
               <h4>Company</h4>
               <ul class="nav nav-links nav-stacked">
@@ -753,9 +766,10 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
               </h4>
             </li>
           </ul>
+          -->
           <!-- /Footer Nav -->
           <div class="footer-bottom">
-            <div class="footer-nav-legal">
+            <!--div class="footer-nav-legal">
               <ul class="SlugWalkerLegal list-inline">
                 <li>
                   <a href="">Terms of Service</a>
@@ -770,11 +784,13 @@ background: #333333 url("http://qualtrics.com/wp-content/themes/qualtrics/images
                   <a href="">Get Help</a>
                 </li>
               </ul>
-            </div>
+            </div-->
+            <!--
             <div class="copyright">
               Copyright © 2014
               <a href="">Qualtrics</a>. All Rights Reserved.
             </div>
+            -->
           </div>
         </div>
       </footer>
