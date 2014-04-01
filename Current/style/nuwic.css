@@ -1,5 +1,11 @@
+.navlinks {
+  color: #333399;
+  padding: 0px 10px;
+
+}
 
 .social {color: indigo}
+
 
 /* http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972 */
 @-ms-viewport{
