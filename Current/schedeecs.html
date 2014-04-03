@@ -1,124 +1,1431 @@
-<!DOCTYPE html>
-<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://fooplugins.com/footable/js/footable.js?v=2-0-1" ></script>
+<link href="http://fooplugins.com/footable/css/footable.core.css?v=2-0-1" rel="stylesheet"/>
+<link href="http://fooplugins.com/footable/demos/css/footable-demos.css" rel="stylesheet"/>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <body>
+<div class="demo-container">
+  
+            <table class="table footable">
+                <thead>
+                    <tr class="footable-group-row">
+                        <th data-group="fall" colspan="3">Group 1</th>
+                        <th data-group="winter" colspan="3">Group 2</th>
+                        <th data-group="spring" colspan="3">Group 3</th>
+                    </tr>
+                    <tr>
+                        <th data-group="fall" data-ignore="true"><input type="checkbox"/></th>
+                        <th data-group="fall">ID</th>
+                        <th data-group="fall" data-hide="phone,tablet">Date 1</th>
+                        <th data-group="winter" data-hide="phone" colspan="3" data-names="Date 2,Date 3,Date 4">Dates 2, 3, 4</th>
+                        <th data-group="spring" data-hide="phone">Date 5</th>
+                        <th data-group="spring" data-hide="phone,tablet">Note</th>
+                        <th data-group="spring" data-hide="phone,tablet">Section</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>2</td>
 
-    <meta name="viewport" content="initial-scale=1.0">
+                    <td>03/01/2014</td>
 
-    <meta name="keywords" content="wic,nu,nuwic,northwestern,women,computing,compsci,eecs,cs,computer">
+                    <td>10/01/2016</td>
+                    <td>01/01/2014</td>
+                    <td>23/01/2014</td>
 
-    <meta name="description" content="Providing a social, academic, and pre-professional network for females in CS and related fields">
+                    <td>18/01/2014</td>
+                    <td>000-003</td>
+                    <td>INT</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>3</td>
 
-    <meta property="og:title" content="Providing a social, academic, and pre-professional network for females in CS and related fields">
+                    <td>03/01/2015</td>
 
-    <!-- http://groups.northwestern.edu/wic/ -->
-    <meta property="og:url" content="http://eecs.northwestern.edu/wic/">
+                    <td>10/01/2015</td>
+                    <td>02/01/2014</td>
+                    <td>24/01/2014</td>
 
-    <meta property="og:site_name" content="NU WiC | Women in Computing at Northwestern University">
+                    <td>18/01/2015</td>
+                    <td>000-001</td>
+                    <td>INT</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>1</td>
 
-     <meta name="og:description" content="An organization striving to encourage, support, and retain females in CS and related fields @ NU through a social, academic, and pre-professional network">
+                    <td>03/01/2016</td>
 
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
+                    <td>10/01/2014</td>
+                    <td>03/01/2014</td>
+                    <td>22/01/2014</td>
 
-    <link rel="shortcut icon" href="./favicon.ico">
+                    <td>18/01/2016</td>
+                    <td>000-002</td>
+                    <td>INT</td>
+                </tr>
+                </tbody>
+            </table>
 
-    <!-- title bar title-->
-    <title>WiC | Women.in.Computing | Northwestern University</title>
+  
+</div>
 
-    <link rel="stylesheet" href="./style/nuwic.css"> 
-    <link rel="stylesheet" href="./style/font-awesome.min.css">
 
-</head>
+<div class="moduletable">
+                    <h3>EECS Course Schedule: 2013-2014</h3>
+                    
 
-<body>
+<div class="adt-ts-filter" style="text-align: right;">
+    Search: <input name="filter" id="at_111_filterbox" value="" maxlength="30" size="30" type="text">
+    <input id="at_111_filterclear" type="submit" value="Clear"/>
+</div>
 
-    <div id="jobs-splash">
-        <div id="logo"></div>
-        <h1>Work With Us!</h1>
-        <h3>Help build the future of mobile development</h3>
-        <a href="#job-openings" class="button">See Open Positions</a>
-    </div>
+<div id="at_111_wrapper" class="ari-data-tables jui-eggplant">
+<table id="at_111" cellpadding="8" cellspacing="0" border="1">
+    <caption>This schedule is updated regularly</caption>
+    <thead>
+        <tr>
+    <th class="ari-tbl-col-0  col_cfcd2084">Course #</th>
+    <th class="ari-tbl-col-1  col_c4ca4238">Course Title</th>
+    <th class="ari-tbl-col-2  col_c81e728d">Fall 2013</th>
+    <th class="ari-tbl-col-3  col_eccbc87e">Winter 2014</th>
+    <th class="ari-tbl-col-4  col_a87ff679">Spring 2014</th>
+</tr>   </thead>
+    <tbody>
+    <tr class=" ari-tbl-row-0">
+                <td class="ari-tbl-col-0  col_cfcd2084">205/EA1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Engineering Analysis <a href="http://eecs.northwestern.edu/ea1" target="_blank">eecs.northwestern.edu/ea1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">9-9:50 MTuWF [Mikhelson]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9-9:50 MTuWF [Lin]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-1">
+                <td class="ari-tbl-col-0  col_cfcd2084">205/EA1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Engineering Analysis <a href="http://eecs.northwestern.edu/ea1" target="_blank">eecs.northwestern.edu/ea1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">10-10:50 MTuWF [Y. Wu]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-2">
+                <td class="ari-tbl-col-0  col_cfcd2084">205/EA1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Engineering Analysis <a href="http://eecs.northwestern.edu/ea1" target="_blank">eecs.northwestern.edu/ea1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50 MTuWF [Honig]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-3">
+                <td class="ari-tbl-col-0  col_cfcd2084">205/EA1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Engineering Analysis <a href="http://eecs.northwestern.edu/ea1" target="_blank">eecs.northwestern.edu/ea1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12-12:50 MTuWF [Nocedal]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-4">
+                <td class="ari-tbl-col-0  col_cfcd2084">205/EA1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Engineering Analysis (Honors) <a href="http://eecs.northwestern.edu/ea1" target="_blank">eecs.northwestern.edu/ea1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50 MTuWF [Berry]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-5">
+                <td class="ari-tbl-col-0  col_cfcd2084">106/DTC</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design Thinking and Communication <a href="http://eecs.northwestern.edu/edc" target="_blank">eecs.northwestern.edu/edc</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">TBA[TBA]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">TBA[Lin]</td>
+            </tr>
+    <tr class=" ari-tbl-row-6">
+                <td class="ari-tbl-col-0  col_cfcd2084">106/DTC</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design Thinking and Communication <a href="http://eecs.northwestern.edu/edc" target="_blank">eecs.northwestern.edu/edc</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">TBA[TBA]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">TBA[Lin]</td>
+            </tr>
+    <tr class=" ari-tbl-row-7">
+                <td class="ari-tbl-col-0  col_cfcd2084">106/DTC</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design Thinking and Communication <a href="http://eecs.northwestern.edu/edc" target="_blank">eecs.northwestern.edu/edc</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">TBA[Grad]</td>
+            </tr>
+    <tr class=" ari-tbl-row-8">
+                <td class="ari-tbl-col-0  col_cfcd2084">106/DTC</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design Thinking and Communication <a href="http://eecs.northwestern.edu/edc" target="_blank">eecs.northwestern.edu/edc</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">TBA[Grad]</td>
+            </tr>
+    <tr class=" ari-tbl-row-9">
+                <td class="ari-tbl-col-0  col_cfcd2084">100</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Electrons, Photons, and Bits: Adventures in Electrical and Computer Engineering <a href="http://eecs.northwestern.edu/eecs-100" target="_blank">eecs.northwestern.edu/eecs-100</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">4-4:50 MTuWF [Taflove]</td>
+            </tr>
+    <tr class=" ari-tbl-row-10">
+                <td class="ari-tbl-col-0  col_cfcd2084">101</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">An Intro to Computer Science for Everyone <a href="http://eecs.northwestern.edu/eecs-101" target="_blank">eecs.northwestern.edu/eecs-101</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:00-3:50 MWF [H. Zhang]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-11">
+                <td class="ari-tbl-col-0  col_cfcd2084">110</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Computer Programming <a href="http://eecs.northwestern.edu/eecs-110" target="_blank">eecs.northwestern.edu/eecs-110</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">10-10:50 MTuWF "C" [Tumblin]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">10-10:50 MTuWF "Python" [Cossairt]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">10-10:50 MTuWF "Python" [Kuzmanovic]</td>
+            </tr>
+    <tr class=" ari-tbl-row-12">
+                <td class="ari-tbl-col-0  col_cfcd2084">111</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Computer Programming I <a href="http://eecs.northwestern.edu/eecs-111" target="_blank">eecs.northwestern.edu/eecs-111</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:00-12:50 MWF [Horswill]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-2:50 MTuWF [Horswill]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-13">
+                <td class="ari-tbl-col-0  col_cfcd2084">120</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Computers &amp; Info Technology <a href="http://eecs.northwestern.edu/eecs-120" target="_blank">eecs.northwestern.edu/eecs-120</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-14">
+                <td class="ari-tbl-col-0  col_cfcd2084">130</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Tools and Technology of the World Wide Web <a href="http://eecs.northwestern.edu/eecs-130" target="_blank">eecs.northwestern.edu/eecs-130</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20 TuTh [Gemmel]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-15">
+                <td class="ari-tbl-col-0  col_cfcd2084">202</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Electrical Engineering <a href="http://eecs.northwestern.edu/eecs-202" target="_blank">eecs.northwestern.edu/eecs-202</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-2:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">10-10:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">10-10:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]</td>
+            </tr>
+    <tr class=" ari-tbl-row-16">
+                <td class="ari-tbl-col-0  col_cfcd2084">203</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Computer Engineering <a href="http://eecs.northwestern.edu/eecs-203" target="_blank">eecs.northwestern.edu/eecs-203</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50 MTuWF [Joseph]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-11:50 MTuWF [CH-Wu]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-11:50 MTuWF [Zhou]</td>
+            </tr>
+    <tr class=" ari-tbl-row-17">
+                <td class="ari-tbl-col-0  col_cfcd2084">205</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Computer System Software <a href="http://eecs.northwestern.edu/eecs-205" target="_blank">eecs.northwestern.edu/eecs-205</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">4-4:50 MTuWF [Lin]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-2:50 MTuWF [Joseph]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-18">
+                <td class="ari-tbl-col-0  col_cfcd2084">211 A</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundmentals of Computer Programming II <a href="http://eecs.northwestern.edu/eecs-211" target="_blank">eecs.northwestern.edu/eecs-211</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">1-1:50 MTuWF [Lin]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-2:50 MTuWF [Jiang]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-1:50 MTuWF [Gemmell]</td>
+            </tr>
+    <tr class=" ari-tbl-row-19">
+                <td class="ari-tbl-col-0  col_cfcd2084">211 B</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundmentals of Computer Programming II <a href="http://eecs.northwestern.edu/eecs-211" target="_blank">eecs.northwestern.edu/eecs-211</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3-3:50 MTuWF [Hendrix]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-2:50 MTuWF [Gemmell]</td>
+            </tr>
+    <tr class=" ari-tbl-row-20">
+                <td class="ari-tbl-col-0  col_cfcd2084">212 (310)</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Mathematical Foundations of Computer Science <a href="http://eecs.northwestern.edu/eecs-212" target="_blank">eecs.northwestern.edu/eecs-212</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20 TuTh [Hendrix]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-11:50 MWF [Rahimi]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-21">
+                <td class="ari-tbl-col-0  col_cfcd2084">213</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Computer Systems <a href="http://eecs.northwestern.edu/eecs-213" target="_blank">eecs.northwestern.edu/eecs-213</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-3:20 TuTh [Hardavellas]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-3:20 TuTh  [Dinda]</td>
+            </tr>
+    <tr class=" ari-tbl-row-22">
+                <td class="ari-tbl-col-0  col_cfcd2084">214 (311)</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Data Structures and Data Management <a href="http://eecs.northwestern.edu/eecs-214" target="_blank">eecs.northwestern.edu/eecs-214</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12-12:50 MWF [Scheuermann]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-23">
+                <td class="ari-tbl-col-0  col_cfcd2084">214A</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Data Structures and Data Management <a href="http://eecs.northwestern.edu/course-list/668-eecs-214-a-data-structures-and-data-management" target="_blank">eecs.northwestern.edu/course-list/668-eecs-214-a-data-structures-and-data-management</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">9-9:50 MWF [Banerjee]</td>
+            </tr>
+    <tr class=" ari-tbl-row-24">
+                <td class="ari-tbl-col-0  col_cfcd2084">214B</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Data Structures and Data Management <a href="http://eecs.northwestern.edu/eecs-214" target="_blank">eecs.northwestern.edu/eecs-214</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-11:50 MWF [Rahimi]</td>
+            </tr>
+    <tr class=" ari-tbl-row-25">
+                <td class="ari-tbl-col-0  col_cfcd2084">221</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Circuits <a href="http://eecs.northwestern.edu/eecs-221" target="_blank">eecs.northwestern.edu/eecs-221</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9-9:50 MTuWF [C. Liu]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-2:50 MTuWF [Plonus]</td>
+            </tr>
+    <tr class=" ari-tbl-row-26">
+                <td class="ari-tbl-col-0  col_cfcd2084">222</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Signals and Systems <a href="http://eecs.northwestern.edu/eecs-222" target="_blank">eecs.northwestern.edu/eecs-222</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-2:50 MTuWF [Pappas]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-2:50 MTuWF [Katsaggelos]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-27">
+                <td class="ari-tbl-col-0  col_cfcd2084">223</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Solid State Engineering <a href="http://eecs.northwestern.edu/eecs-223" target="_blank">eecs.northwestern.edu/eecs-223</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">9-9:50 MTuWF [Razeghi]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">9-9:50 MTuWF [Aydin]</td>
+            </tr>
+    <tr class=" ari-tbl-row-28">
+                <td class="ari-tbl-col-0  col_cfcd2084">224</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Electromagnetics and Photonics <a href="http://eecs.northwestern.edu/eecs-224" target="_blank">eecs.northwestern.edu/eecs-224</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50 MTuWF [Taflove]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-1:50 MTuWF [Taflove]</td>
+            </tr>
+    <tr class=" ari-tbl-row-29">
+                <td class="ari-tbl-col-0  col_cfcd2084">225</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Electronics <a href="http://eecs.northwestern.edu/eecs-225" target="_blank">eecs.northwestern.edu/eecs-225</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-2:50 MTuWF [C.H. Wu]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3-3:50 MTuWF <a href="http://[C.H" target="_blank">[C.H</a>. Wu]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-30">
+                <td class="ari-tbl-col-0  col_cfcd2084">230</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Programming for Engineers <a href="http://eecs.northwestern.edu/eecs-230" target="_blank">eecs.northwestern.edu/eecs-230</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">1-1:50 MTuWF [Hendrix]</td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-1:50 MTuWF [Trajcevski]</td>
+            </tr>
+    <tr class=" ari-tbl-row-31">
+                <td class="ari-tbl-col-0  col_cfcd2084">250</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Physical Electronics and Deices <a href="http://eecs.northwestern.edu/eecs-250" target="_blank">eecs.northwestern.edu/eecs-250</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-32">
+                <td class="ari-tbl-col-0  col_cfcd2084">295</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Robotics Laboratory <a href="http://eecs.northwestern.edu/eecs-295" target="_blank">eecs.northwestern.edu/eecs-295</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:00-4:50  TuTh [Argall]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-33">
+                <td class="ari-tbl-col-0  col_cfcd2084">302</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Probabilistic Systems and Random Signals <a href="http://eecs.northwestern.edu/eecs-302" target="_blank">eecs.northwestern.edu/eecs-302</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">9-9:50 MTuWF [Plonus]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">10-10:50 MTuWF [Subramanian]</td>
+            </tr>
+    <tr class=" ari-tbl-row-34">
+                <td class="ari-tbl-col-0  col_cfcd2084">303</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Digital Logic Design <a href="http://eecs.northwestern.edu/eecs-303" target="_blank">eecs.northwestern.edu/eecs-303</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 TuTh [Ogrenci Memik]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 TuTh [Mikhelson]</td>
+            </tr>
+    <tr class=" ari-tbl-row-35">
+                <td class="ari-tbl-col-0  col_cfcd2084">307</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Communications Systems <a href="http://eecs.northwestern.edu/eecs-307" target="_blank">eecs.northwestern.edu/eecs-307</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">10-10:50 MTuWF [C.C. Lee]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-36">
+                <td class="ari-tbl-col-0  col_cfcd2084">313</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Telecommunication Networks for Multimedia <a href="http://eecs.northwestern.edu/eecs-313" target="_blank">eecs.northwestern.edu/eecs-313</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-37">
+                <td class="ari-tbl-col-0  col_cfcd2084">317</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Data Management and Information Processing <a href="http://eecs.northwestern.edu/eecs-317" target="_blank">eecs.northwestern.edu/eecs-317</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-2:50 MWF [Trajcevski]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">12-12:50 MWF [Hendrix]</td>
+            </tr>
+    <tr class=" ari-tbl-row-38">
+                <td class="ari-tbl-col-0  col_cfcd2084">321</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Programming Languages <a href="http://eecs.northwestern.edu/eecs-321" target="_blank">eecs.northwestern.edu/eecs-321</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:20 MF [Findler]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-39">
+                <td class="ari-tbl-col-0  col_cfcd2084">322</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Compiler Construction <a href="http://eecs.northwestern.edu/eecs-322" target="_blank">eecs.northwestern.edu/eecs-322</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-3:20 MW [Findler]</td>
+            </tr>
+    <tr class=" ari-tbl-row-40">
+                <td class="ari-tbl-col-0  col_cfcd2084">325</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Artificial Intelligence Prog. <a href="http://eecs.northwestern.edu/eecs-325" target="_blank">eecs.northwestern.edu/eecs-325</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:30-1:50 MW [Riesbeck]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-41">
+                <td class="ari-tbl-col-0  col_cfcd2084">328</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Numerical Methods for Engineers <a href="http://eecs.northwestern.edu/eecs-328" target="_blank">eecs.northwestern.edu/eecs-328</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-42">
+                <td class="ari-tbl-col-0  col_cfcd2084">330</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Human Computer Interaction <a href="http://eecs.northwestern.edu/eecs-330" target="_blank">eecs.northwestern.edu/eecs-330</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">1-1:50 MWF [Horn/Zhang]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-43">
+                <td class="ari-tbl-col-0  col_cfcd2084">332</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Digital Image Analysis <a href="http://eecs.northwestern.edu/eecs-332" target="_blank">eecs.northwestern.edu/eecs-332</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-3:20 TuTh [Y. Wu]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-44">
+                <td class="ari-tbl-col-0  col_cfcd2084">333</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Communication Networks <a href="http://eecs.northwestern.edu/eecs-333" target="_blank">eecs.northwestern.edu/eecs-333</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-12:20 TuTh [Guo]</td>
+            </tr>
+    <tr class=" ari-tbl-row-45">
+                <td class="ari-tbl-col-0  col_cfcd2084">334</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Computer Vision <a href="http://eecs.northwestern.edu/eecs-334" target="_blank">eecs.northwestern.edu/eecs-334</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-46">
+                <td class="ari-tbl-col-0  col_cfcd2084">335</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to the Theory of Computation  <a href="http://eecs.northwestern.edu/eecs-335" target="_blank">eecs.northwestern.edu/eecs-335</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:45 MW [Kao]</td>
+            </tr>
+    <tr class=" ari-tbl-row-47">
+                <td class="ari-tbl-col-0  col_cfcd2084">336</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design &amp; Analysis of Algorithms(Honors) <a href="http://eecs.northwestern.edu/eecs-336" target="_blank">eecs.northwestern.edu/eecs-336</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 TuTh [Hartline]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 [Kao] TuTh</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-48">
+                <td class="ari-tbl-col-0  col_cfcd2084">337</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Semantic Information Processing <a href="http://eecs.northwestern.edu/eecs-337" target="_blank">eecs.northwestern.edu/eecs-337</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9:30-10:50 TuTh [Birnbaum]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-49">
+                <td class="ari-tbl-col-0  col_cfcd2084">338</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Practicum in Intelligent Information Systems <a href="http://eecs.northwestern.edu/eecs-338" target="_blank">eecs.northwestern.edu/eecs-338</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20 MW [Birnbaum]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-50">
+                <td class="ari-tbl-col-0  col_cfcd2084">339</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Databases <a href="http://eecs.northwestern.edu/eecs-339" target="_blank">eecs.northwestern.edu/eecs-339</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">4-4:50 MWF [Dinda]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:20 TuTh [Trajcevski]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-51">
+                <td class="ari-tbl-col-0  col_cfcd2084">340</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Computer Networking <a href="http://eecs.northwestern.edu/eecs-340" target="_blank">eecs.northwestern.edu/eecs-340</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 WF [Chen]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-52">
+                <td class="ari-tbl-col-0  col_cfcd2084">343</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Operating Systems <a href="http://eecs.northwestern.edu/eecs-343" target="_blank">eecs.northwestern.edu/eecs-343</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20 TuTh [Bustamante]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-53">
+                <td class="ari-tbl-col-0  col_cfcd2084">345</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Distributed Systems <a href="http://eecs.northwestern.edu/eecs-345" target="_blank">eecs.northwestern.edu/eecs-345</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-12:20 MW [Bustamante]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-54">
+                <td class="ari-tbl-col-0  col_cfcd2084">346</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Microprocessor System Design <a href="http://eecs.northwestern.edu/eecs-346" target="_blank">eecs.northwestern.edu/eecs-346</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">10-10:50 MTuWF [Henschen]</td>
+            </tr>
+    <tr class=" ari-tbl-row-55">
+                <td class="ari-tbl-col-0  col_cfcd2084">347</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Microprocessor Systems Project I <a href="http://eecs.northwestern.edu/eecs-347-1" target="_blank">eecs.northwestern.edu/eecs-347-1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9-9:50 MWF [Henschen]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-56">
+                <td class="ari-tbl-col-0  col_cfcd2084">347-2</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Microprocessor Systems Project II <a href="http://eecs.northwestern.edu/eecs-347-2" target="_blank">eecs.northwestern.edu/eecs-347-2</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">9-9:50 MWF [Henschen]</td>
+            </tr>
+    <tr class=" ari-tbl-row-57">
+                <td class="ari-tbl-col-0  col_cfcd2084">348</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Artificial Intelligence <a href="http://eecs.northwestern.edu/eecs-348" target="_blank">eecs.northwestern.edu/eecs-348</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">10-10:50 MWF [Downey]</td>
+            </tr>
+    <tr class=" ari-tbl-row-58">
+                <td class="ari-tbl-col-0  col_cfcd2084">349</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Machine Learning <a href="http://eecs.northwestern.edu/eecs-349" target="_blank">eecs.northwestern.edu/eecs-349</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">1-1:50 MWF [Pardo]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-2:50 MWF [Downey]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-59">
+                <td class="ari-tbl-col-0  col_cfcd2084">350</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Computer Security <a href="http://eecs.northwestern.edu/eecs-350" target="_blank">eecs.northwestern.edu/eecs-350</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-60">
+                <td class="ari-tbl-col-0  col_cfcd2084">351</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Computer Graphics <a href="http://eecs.northwestern.edu/eecs-351" target="_blank">eecs.northwestern.edu/eecs-351</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">10-10:50 MWF [Tumblin]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-61">
+                <td class="ari-tbl-col-0  col_cfcd2084">352</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Machine Perception of Music &amp; Audio <a href="http://eecs.northwestern.edu/eecs-352" target="_blank">eecs.northwestern.edu/eecs-352</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 MW [Pardo]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-62">
+                <td class="ari-tbl-col-0  col_cfcd2084">354</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Network Penetration and Security <a href="http://eecs.northwestern.edu/eecs-354" target="_blank">eecs.northwestern.edu/eecs-354</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20 WF [Chen]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-63">
+                <td class="ari-tbl-col-0  col_cfcd2084">355</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Asic and FPGA Design <a href="http://eecs.northwestern.edu/eecs-355" target="_blank">eecs.northwestern.edu/eecs-355</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-11:50 MWF [S. Memik]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-64">
+                <td class="ari-tbl-col-0  col_cfcd2084">357</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to VLSI CAD <a href="http://eecs.northwestern.edu/eecs-357" target="_blank">eecs.northwestern.edu/eecs-357</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 TuTh [Zhou]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-65">
+                <td class="ari-tbl-col-0  col_cfcd2084">358</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Parallel Computing <a href="http://eecs.northwestern.edu/eecs-358" target="_blank">eecs.northwestern.edu/eecs-358</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:20 TuTh [G. Memik]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-66">
+                <td class="ari-tbl-col-0  col_cfcd2084">359</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Digital Signal Processing <a href="http://eecs.northwestern.edu/eecs-359" target="_blank">eecs.northwestern.edu/eecs-359</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 TuTh Pappas</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-67">
+                <td class="ari-tbl-col-0  col_cfcd2084">360</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Feedback Systems <a href="http://eecs.northwestern.edu/eecs-360" target="_blank">eecs.northwestern.edu/eecs-360</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">10-10:50 MWF [Freeman]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-68">
+                <td class="ari-tbl-col-0  col_cfcd2084">361</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computer Architecture I <a href="http://eecs.northwestern.edu/eecs-361" target="_blank">eecs.northwestern.edu/eecs-361</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:30-1:50 TuTh [G. Memik]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-69">
+                <td class="ari-tbl-col-0  col_cfcd2084">362</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computer Architecture Project <a href="http://eecs.northwestern.edu/eecs-362" target="_blank">eecs.northwestern.edu/eecs-362</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-12:20 TuTh [Chao Yan and Yuanbo Fan]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-70">
+                <td class="ari-tbl-col-0  col_cfcd2084">363</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Digital Filtering <a href="http://eecs.northwestern.edu/eecs-363" target="_blank">eecs.northwestern.edu/eecs-363</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-1:50 MWF [Butz]</td>
+            </tr>
+    <tr class=" ari-tbl-row-71">
+                <td class="ari-tbl-col-0  col_cfcd2084">366</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Designing and Constructing Models with Multi-agent Languages <a href="http://eecs.northwestern.edu/eecs-366" target="_blank">eecs.northwestern.edu/eecs-366</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-72">
+                <td class="ari-tbl-col-0  col_cfcd2084">368/468</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Programming Massively Parallel Processors with CUDA <a href="http://eecs.northwestern.edu/eecs-368468" target="_blank">eecs.northwestern.edu/eecs-368468</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 TuTh [Hardavellas]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-73">
+                <td class="ari-tbl-col-0  col_cfcd2084">369</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Sensor Networks <a href="http://eecs.northwestern.edu/eecs-369" target="_blank">eecs.northwestern.edu/eecs-369</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 MW [Trajcevski / Scheuermann]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-74">
+                <td class="ari-tbl-col-0  col_cfcd2084">370</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computer Game Design <a href="http://eecs.northwestern.edu/eecs-370" target="_blank">eecs.northwestern.edu/eecs-370</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-75">
+                <td class="ari-tbl-col-0  col_cfcd2084">371</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Knowledge Representation and Reasoning <a href="http://eecs.northwestern.edu/eecs-371" target="_blank">eecs.northwestern.edu/eecs-371</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 TuTh [Forbus]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-76">
+                <td class="ari-tbl-col-0  col_cfcd2084">372/472</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Designing and Constructing Models with Multi-Agent Languages <a href="http://eecs.northwestern.edu/eecs-372472" target="_blank">eecs.northwestern.edu/eecs-372472</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-77">
+                <td class="ari-tbl-col-0  col_cfcd2084">374</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Digital Control <a href="http://eecs.northwestern.edu/eecs-374" target="_blank">eecs.northwestern.edu/eecs-374</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 MW [Freeman]</td>
+            </tr>
+    <tr class=" ari-tbl-row-78">
+                <td class="ari-tbl-col-0  col_cfcd2084">378</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Digital Communications <a href="http://eecs.northwestern.edu/eecs-378" target="_blank">eecs.northwestern.edu/eecs-378</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-11:50 MWF <a href="http://[C.C" target="_blank">[C.C</a>. Lee]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-79">
+                <td class="ari-tbl-col-0  col_cfcd2084">379</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Lasers and Fiber Optics <a href="http://eecs.northwestern.edu/eecs-379" target="_blank">eecs.northwestern.edu/eecs-379</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:30-1:50 TuTh [Kanter]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-80">
+                <td class="ari-tbl-col-0  col_cfcd2084">380</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Wireless Communications <a href="http://eecs.northwestern.edu/eecs-380" target="_blank">eecs.northwestern.edu/eecs-380</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-81">
+                <td class="ari-tbl-col-0  col_cfcd2084">381</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Electronic Properties of Materials <a href="http://eecs.northwestern.edu/eecs-381" target="_blank">eecs.northwestern.edu/eecs-381</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">1-1:50 MWF [Mohseni]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-82">
+                <td class="ari-tbl-col-0  col_cfcd2084">382</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Photonic Information Processing <a href="http://eecs.northwestern.edu/eecs-382" target="_blank">eecs.northwestern.edu/eecs-382</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-3:20 MW [Yuen]</td>
+            </tr>
+    <tr class=" ari-tbl-row-83">
+                <td class="ari-tbl-col-0  col_cfcd2084">383</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fiber-Optic Communications <a href="http://eecs.northwestern.edu/eecs-383" target="_blank">eecs.northwestern.edu/eecs-383</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-84">
+                <td class="ari-tbl-col-0  col_cfcd2084">384</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Solid State Electronic Devices <a href="http://eecs.northwestern.edu/eecs-384" target="_blank">eecs.northwestern.edu/eecs-384</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-3:20 TuTh [Grayson]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-85">
+                <td class="ari-tbl-col-0  col_cfcd2084">385</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Optoelectronics <a href="http://eecs.northwestern.edu/eecs-385" target="_blank">eecs.northwestern.edu/eecs-385</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-11:50 MWF [Aydin]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-86">
+                <td class="ari-tbl-col-0  col_cfcd2084">386</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computational Electromagnetics and Photonics <a href="http://eecs.northwestern.edu/eecs-386" target="_blank">eecs.northwestern.edu/eecs-386</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-87">
+                <td class="ari-tbl-col-0  col_cfcd2084">388</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Nanotechnology <a href="http://eecs.northwestern.edu/eecs-388" target="_blank">eecs.northwestern.edu/eecs-388</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9:30-10:50 TuTh [Razeghi]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-88">
+                <td class="ari-tbl-col-0  col_cfcd2084">389</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Superconductivity and its Applications <a href="http://eecs.northwestern.edu/eecs-389" target="_blank">eecs.northwestern.edu/eecs-389</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-3:20 TuTh [Aydin]</td>
+            </tr>
+    <tr class=" ari-tbl-row-89">
+                <td class="ari-tbl-col-0  col_cfcd2084">390</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intro to Robotics <a href="http://eecs.northwestern.edu/eecs-390" target="_blank">eecs.northwestern.edu/eecs-390</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-2:50 MWF [C-H Wu]</td>
+            </tr>
+    <tr class=" ari-tbl-row-90">
+                <td class="ari-tbl-col-0  col_cfcd2084">391</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">VLSI Systems Design <a href="http://eecs.northwestern.edu/eecs-391" target="_blank">eecs.northwestern.edu/eecs-391</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9:30-10:50 TuTh [Mikhelson]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-91">
+                <td class="ari-tbl-col-0  col_cfcd2084">392</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">VLSI Systems Design Projects <a href="http://eecs.northwestern.edu/eecs-392" target="_blank">eecs.northwestern.edu/eecs-392</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">12:30-1:50 TuTh [Ilya Mikhelson]</td>
+            </tr>
+    <tr class=" ari-tbl-row-92">
+                <td class="ari-tbl-col-0  col_cfcd2084">393/394</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design and Analysis of High-Speed Integrated Circuits <a href="http://eecs.northwestern.edu/eecs-393-493" target="_blank">eecs.northwestern.edu/eecs-393-493</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-93">
+                <td class="ari-tbl-col-0  col_cfcd2084">394</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Software Project Management &amp; Development <a href="http://eecs.northwestern.edu/eecs-394" target="_blank">eecs.northwestern.edu/eecs-394</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">10-10:50 MWF [Riesbeck]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-12:20 TuTh [Riesbeck]</td>
+            </tr>
+    <tr class=" ari-tbl-row-94">
+                <td class="ari-tbl-col-0  col_cfcd2084">395</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">TBA (C. Liu) <a href="http://eecs.northwestern.edu/eecs-395-c-liu" target="_blank">eecs.northwestern.edu/eecs-395-c-liu</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">9-9:50 MWF [C. Liu]</td>
+            </tr>
+    <tr class=" ari-tbl-row-95">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Advanced Topics in) Computer Architecture <a href="http://eecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture" target="_blank">eecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 TuTh [Hardavellas]</td>
+            </tr>
+    <tr class=" ari-tbl-row-96">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Advanced Topics in) Quantum Electronics <a href="http://eecs.northwestern.edu/eecs-395-495-advanced-topics-in-quantum-electronics" target="_blank">eecs.northwestern.edu/eecs-395-495-advanced-topics-in-quantum-electronics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:30 MW [Shahriar]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-97">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Algorithmic DNA Self-Assembly (Kao) <a href="http://eecs.northwestern.edu/eecs-395-495-algorithmic-dna-self-assembly-kao" target="_blank">eecs.northwestern.edu/eecs-395-495-algorithmic-dna-self-assembly-kao</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-98">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Algorithmic and Economic Aspects of Social Networks <a href="http://eecs.northwestern.edu/eecs-395-algorithmic-and-economic-aspects-of-social-networks" target="_blank">eecs.northwestern.edu/eecs-395-algorithmic-and-economic-aspects-of-social-networks</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-99">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Algorithmic Mechanism Design <a href="http://eecs.northwestern.edu/eecs-395-495-algorithmic-mechanism-design" target="_blank">eecs.northwestern.edu/eecs-395-495-algorithmic-mechanism-design</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-100">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Algorithmic Techniques for Bioinformation <a href="http://eecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics" target="_blank">eecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 TuTh [Kao]</td>
+            </tr>
+    <tr class=" ari-tbl-row-101">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">The Art of Multicore Concurrent Programming <a href="http://eecs.northwestern.edu/eecs-395-495-art-of-multicore-concurrent-programming" target="_blank">eecs.northwestern.edu/eecs-395-495-art-of-multicore-concurrent-programming</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-3:20 TuTh [H. Zhou]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-102">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Bioinformatics (Kao) <a href="http://eecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics" target="_blank">eecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-103">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Cardiovascular Instrumentation <a href="http://eecs.northwestern.edu/eecs-395-495-cardiovascular-instrumentation" target="_blank">eecs.northwestern.edu/eecs-395-495-cardiovascular-instrumentation</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">1-1:50 MWF [Sahakian]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-104">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Cognitive Simulation for Virtual Characters <a href="http://eecs.northwestern.edu/eecs-395-495-cognitive-simulation-for-virtual-characters" target="_blank">eecs.northwestern.edu/eecs-395-495-cognitive-simulation-for-virtual-characters</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">4-4:50 MWF [Horswill]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-105">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Collaboration Technology <a href="http://eecs.northwestern.edu/eecs-395-495-collaboration-technology" target="_blank">eecs.northwestern.edu/eecs-395-495-collaboration-technology</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-106">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Advanced Topics in) Computer Architecture <a href="http://eecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture" target="_blank">eecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-107">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computational Auditory Scene Analysis <a href="http://eecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis" target="_blank">eecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-108">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Special Topics) Computational Complexity <a href="http://eecs.northwestern.edu/eecs-395-495-special-topics-computational-complexity" target="_blank">eecs.northwestern.edu/eecs-395-495-special-topics-computational-complexity</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-109">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computational Geometry <a href="http://eecs.northwestern.edu/eecs-395-495-computational-geometry" target="_blank">eecs.northwestern.edu/eecs-395-495-computational-geometry</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">4-5:20 MW [Trajcevski]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-110">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Computational Photography Seminar <a href="http://eecs.northwestern.edu/course-list/585-eecs-395-495-computational-photography-seminar" target="_blank">eecs.northwestern.edu/course-list/585-eecs-395-495-computational-photography-seminar</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-4 W [Cossairt]</td>
+            </tr>
+    <tr class=" ari-tbl-row-111">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Computational Photography <a href="http://eecs.northwestern.edu/eecs-395-495-introduction-to-computational-photography" target="_blank">eecs.northwestern.edu/eecs-395-495-introduction-to-computational-photography</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 TuTh [Cossairt]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-112">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Intermediate Computer Graphics <a href="http://eecs.northwestern.edu/eecs-395-495-intermediate-computer-graphics" target="_blank">eecs.northwestern.edu/eecs-395-495-intermediate-computer-graphics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">9:30-10:50 TuTh [Tumblin]</td>
+            </tr>
+    <tr class=" ari-tbl-row-113">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Derandomization <a href="http://eecs.northwestern.edu/eecs-395-495-derandomization" target="_blank">eecs.northwestern.edu/eecs-395-495-derandomization</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-114">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Distributed Systems in Challenging Environments <a href="http://eecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments" target="_blank">eecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-115">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Cryptography <a href="http://eecs.northwestern.edu/eecs-395-495-introduction-to-cryptography" target="_blank">eecs.northwestern.edu/eecs-395-495-introduction-to-cryptography</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-116">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Special Topics) Embedded Systems <a href="http://eecs.northwestern.edu/eecs-395-495-special-topics-embedded-systems" target="_blank">eecs.northwestern.edu/eecs-395-495-special-topics-embedded-systems</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3-6 Tu [Henschen, J. Lee]</td>
+            </tr>
+    <tr class=" ari-tbl-row-117">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">A Hands-on Course in Communication Systems <a href="http://eecs.northwestern.edu/eecs-395-495-a-hands-on-course-in-communication-systems" target="_blank">eecs.northwestern.edu/eecs-395-495-a-hands-on-course-in-communication-systems</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:30 MW [Guo]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-118">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Geospatial Vision and Visualization <a href="http://eecs.northwestern.edu/eecs-395-495-geospatial-vision-and-visualization" target="_blank">eecs.northwestern.edu/eecs-395-495-geospatial-vision-and-visualization</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">6-9 Tu [Chen, Xin]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-119">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Human-level Artificial Intelligence <a href="http://eecs.northwestern.edu/eecs-395-495-human-level-artificial-intelligence" target="_blank">eecs.northwestern.edu/eecs-395-495-human-level-artificial-intelligence</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-120">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">(Special Topics) Innovation in Journalism &amp; Technology <a href="http://eecs.northwestern.edu/eecs-395-495-special-topics-innovation-in-journalism-technology" target="_blank">eecs.northwestern.edu/eecs-395-495-special-topics-innovation-in-journalism-technology</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">6-9 W [Birnbaum]</td>
+            </tr>
+    <tr class=" ari-tbl-row-121">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Probabilistic Graphical Models <a href="http://eecs.northwestern.edu/eecs-395-495-probabilistic-graphical-models" target="_blank">eecs.northwestern.edu/eecs-395-495-probabilistic-graphical-models</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 TuTh [Downey]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-122">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Mixed Signal Circuits Systems <a href="http://eecs.northwestern.edu/eecs-395-495-mixed-signal-circuits-systems" target="_blank">eecs.northwestern.edu/eecs-395-495-mixed-signal-circuits-systems</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-123">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Networking Problems in Cloud Computing <a href="http://eecs.northwestern.edu/eecs-395-495-networking-problems-in-cloud-computing" target="_blank">eecs.northwestern.edu/eecs-395-495-networking-problems-in-cloud-computing</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">12:30-1:50 MW [Kuzmanovic]</td>
+            </tr>
+    <tr class=" ari-tbl-row-124">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Object-Oriented Languages and Environments <a href="http://eecs.northwestern.edu/eecs-395-495-object-oriented-languages-and-environments" target="_blank">eecs.northwestern.edu/eecs-395-495-object-oriented-languages-and-environments</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-125">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Online Advertising: A Systems Approach (Kuzmanovic) <a href="http://eecs.northwestern.edu/eecs-395-495-online-advertising-a-systems-approach" target="_blank">eecs.northwestern.edu/eecs-395-495-online-advertising-a-systems-approach</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-126">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">The Probabilistic Method <a href="http://eecs.northwestern.edu/eecs-395-495-the-probabilistic-method" target="_blank">eecs.northwestern.edu/eecs-395-495-the-probabilistic-method</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-127">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Programming Languages Seminar <a href="http://eecs.northwestern.edu/eecs-395-495-programming-languages-seminar" target="_blank">eecs.northwestern.edu/eecs-395-495-programming-languages-seminar</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:30-1:50 TuTh [Findler]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-128">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Quantum Transport &amp; Magneto Transport <a href="http://eecs.northwestern.edu/course-list/644-eecs-395-495-advanced-quantum-transport-magneto-transport" target="_blank">eecs.northwestern.edu/course-list/644-eecs-395-495-advanced-quantum-transport-magneto-transport</a>
+</td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-12:20 TuTh [Grayson]</td>
+            </tr>
+    <tr class=" ari-tbl-row-129">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Game Development Studio <a href="http://eecs.northwestern.edu/eecs-395-game-development-studio" target="_blank">eecs.northwestern.edu/eecs-395-game-development-studio</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-130">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Simulation-Based Virtual Characters for Interactive Entertainment <a href="http://eecs.northwestern.edu/eecs-395-495-simulation-based-virtual-characters-for-interactive-entertainment" target="_blank">eecs.northwestern.edu/eecs-395-495-simulation-based-virtual-characters-for-interactive-entertainment</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-131">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Special Relativity in Optics <a href="http://eecs.northwestern.edu/eecs-395-495-special-relativity-in-optics" target="_blank">eecs.northwestern.edu/eecs-395-495-special-relativity-in-optics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-132">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Technology Infrastructure: Concepts, Requirements, Design and Operation <a href="http://eecs.northwestern.edu/eecs-395-495-technology-infrastructure-concepts-requirements-design-and-operation" target="_blank">eecs.northwestern.edu/eecs-395-495-technology-infrastructure-concepts-requirements-design-and-operation</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">10-10:50 MWF [Rahimi]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-133">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Tangible Interaction Design and Learning (Horn) <a href="http://eecs.northwestern.edu/eecs-395-495-lrn-sci-451-tangible-interaction-design-and-learning-horn" target="_blank">eecs.northwestern.edu/eecs-395-495-lrn-sci-451-tangible-interaction-design-and-learning-horn</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">1-4 W [Horn]</td>
+            </tr>
+    <tr class=" ari-tbl-row-134">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Web Information Retrieval and Extraction (Downey) <a href="http://eecs.northwestern.edu/eecs-395-495-web-information-retrieval-and-extraction" target="_blank">eecs.northwestern.edu/eecs-395-495-web-information-retrieval-and-extraction</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-135">
+                <td class="ari-tbl-col-0  col_cfcd2084">395/495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Distributed Systems in Challenging Environments <a href="http://eecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments" target="_blank">eecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments</a>
 
-    <div id="wrapper" class="jobs">
-        <h1 class="section">Our Story</h1>
-        <div id="about">
-            <p>
-                Drifty was started in 2012 by <a href="http://twitter.com/helloimben">Ben Sperry</a> and <a href="http://twitter.com/maxlynch">Max Lynch</a> when they launched a simple drag-and-drop development tool for jQuery Mobile development, <a href="http://codiqa.com/">Codiqa</a>, that made it incredibly easy to prototype and build mobile web apps.
-            </p>
-            <p>
-                Soon after, Drifty released its second product, <a href="http://jetstrap.com/">Jetstrap</a> which made it possible for Twitter Bootstrap developers to build amazing, responsive websites without having to code.
-            </p>
-            <p>
-                In early 2013, Drifty was accepted into and joined <a href="http://techstars.com/">TechStars</a>, the world-wide startup accelerator where we tripled revenue and substantially grew our user base.
-            </p>
-            <p>
-                In December 2013, we released our third major project, the open source <a href="http://ionicframework.com/">Ionic Framework</a>, with the goal of changing the way developers build mobile apps. Ionic might be new, but it's already gaining some exciting traction and attention from developers around the world.
-            </p>
-            <p>
-                Today, our products serve over 250,000 people, from more countries than we even knew existed, and have created some incredibly happy customers.
-            </p>
-            <p>
-                We are an independent, highly talented team that loves making and selling great software, and we do it our way. Come join us!
-            </p>
-        </div>
+</td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">11-12:20 MW [Bustamante]</td>
+            </tr>
+    <tr class=" ari-tbl-row-136">
+                <td class="ari-tbl-col-0  col_cfcd2084">401</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Fundamentals of Electronic Devices <a href="http://eecs.northwestern.edu/eecs-401" target="_blank">eecs.northwestern.edu/eecs-401</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 TuTh [Mohseni]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-137">
+                <td class="ari-tbl-col-0  col_cfcd2084">402</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Electronic Devices <a href="http://eecs.northwestern.edu/eecs-402" target="_blank">eecs.northwestern.edu/eecs-402</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-138">
+                <td class="ari-tbl-col-0  col_cfcd2084">403</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Quantum Semiconductors <a href="http://eecs.northwestern.edu/eecs-403" target="_blank">eecs.northwestern.edu/eecs-403</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:20 TuTh [Grayson]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-139">
+                <td class="ari-tbl-col-0  col_cfcd2084">404</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Quantum Electronics <a href="http://eecs.northwestern.edu/eecs-404" target="_blank">eecs.northwestern.edu/eecs-404</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 MW [Shahriar]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-140">
+                <td class="ari-tbl-col-0  col_cfcd2084">405</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Photonics <a href="http://eecs.northwestern.edu/eecs-405" target="_blank">eecs.northwestern.edu/eecs-405</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 TuTh [Mohseni]</td>
+            </tr>
+    <tr class=" ari-tbl-row-141">
+                <td class="ari-tbl-col-0  col_cfcd2084">406</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Nonlinear Optics <a href="http://eecs.northwestern.edu/eecs-406" target="_blank">eecs.northwestern.edu/eecs-406</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">11-12:20 TuTh [Y. Huang]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-142">
+                <td class="ari-tbl-col-0  col_cfcd2084">410</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">System Theory <a href="http://eecs.northwestern.edu/eecs-410" target="_blank">eecs.northwestern.edu/eecs-410</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50  MWF [Butz]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-143">
+                <td class="ari-tbl-col-0  col_cfcd2084">418</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Digital Signal Processing <a href="http://eecs.northwestern.edu/eecs-418" target="_blank">eecs.northwestern.edu/eecs-418</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">1-1:50 MWF [Butz]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-144">
+                <td class="ari-tbl-col-0  col_cfcd2084">420</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Digital Image Processing <a href="http://eecs.northwestern.edu/eecs-420" target="_blank">eecs.northwestern.edu/eecs-420</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">5-8pm W [Katsaggelos]</td>
+            </tr>
+    <tr class=" ari-tbl-row-145">
+                <td class="ari-tbl-col-0  col_cfcd2084">421</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Multimedia Signal Processing <a href="http://eecs.northwestern.edu/eecs-421" target="_blank">eecs.northwestern.edu/eecs-421</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-146">
+                <td class="ari-tbl-col-0  col_cfcd2084">422</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Random Processes in Comm. and Control I <a href="http://eecs.northwestern.edu/eecs-422" target="_blank">eecs.northwestern.edu/eecs-422</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-5:20 TuTh [Berry]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-147">
+                <td class="ari-tbl-col-0  col_cfcd2084">423</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Random Processes in Communications and Control II <a href="http://eecs.northwestern.edu/eecs-423" target="_blank">eecs.northwestern.edu/eecs-423</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-148">
+                <td class="ari-tbl-col-0  col_cfcd2084">425</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Quantum Electronics II: Noise, Modulation, and Quantum Properties of Laser Emissions <a href="http://eecs.northwestern.edu/eecs-425" target="_blank">eecs.northwestern.edu/eecs-425</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-149">
+                <td class="ari-tbl-col-0  col_cfcd2084">426</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Signal Detection and Estimation <a href="http://eecs.northwestern.edu/eecs-426" target="_blank">eecs.northwestern.edu/eecs-426</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 MW [CC Lee]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-150">
+                <td class="ari-tbl-col-0  col_cfcd2084">427</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Optical Communications <a href="http://eecs.northwestern.edu/eecs-427" target="_blank">eecs.northwestern.edu/eecs-427</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">3:30-4:50 MW [Yuen]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-151">
+                <td class="ari-tbl-col-0  col_cfcd2084">428</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Information Theory <a href="http://eecs.northwestern.edu/eecs-428" target="_blank">eecs.northwestern.edu/eecs-428</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">3:30-4:50 MW [Guo]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-152">
+                <td class="ari-tbl-col-0  col_cfcd2084">429</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Selected Topics in Quantum Information Science and Technology <a href="http://eecs.northwestern.edu/eecs-429" target="_blank">eecs.northwestern.edu/eecs-429</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">4-5:20 MW [Yuen]</td>
+            </tr>
+    <tr class=" ari-tbl-row-153">
+                <td class="ari-tbl-col-0  col_cfcd2084">430</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Design of Interactive Learning Environments <a href="http://eecs.northwestern.edu/eecs-430" target="_blank">eecs.northwestern.edu/eecs-430</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-154">
+                <td class="ari-tbl-col-0  col_cfcd2084">431</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Human Perception and Electronic Media <a href="http://eecs.northwestern.edu/eecs-431" target="_blank">eecs.northwestern.edu/eecs-431</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9:30-10:50 TuTh [Pappas]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-155">
+                <td class="ari-tbl-col-0  col_cfcd2084">432</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Computer Vision <a href="http://eecs.northwestern.edu/eecs-432" target="_blank">eecs.northwestern.edu/eecs-432</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-156">
+                <td class="ari-tbl-col-0  col_cfcd2084">435</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Neural Networks <a href="http://eecs.northwestern.edu/eecs-435" target="_blank">eecs.northwestern.edu/eecs-435</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-157">
+                <td class="ari-tbl-col-0  col_cfcd2084">438</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Interdisciplinary Nonlinear Dynamics <a href="http://eecs.northwestern.edu/eecs-438" target="_blank">eecs.northwestern.edu/eecs-438</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-158">
+                <td class="ari-tbl-col-0  col_cfcd2084">440</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Networking <a href="http://eecs.northwestern.edu/eecs-440" target="_blank">eecs.northwestern.edu/eecs-440</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-12:20TuTh [Kuzmanovic]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-159">
+                <td class="ari-tbl-col-0  col_cfcd2084">441</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Resource Virtualization <a href="http://eecs.northwestern.edu/eecs-441" target="_blank">eecs.northwestern.edu/eecs-441</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">9:30-11 TuTh [Dinda]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-160">
+                <td class="ari-tbl-col-0  col_cfcd2084">442</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Dynamic Behavior of Applications, Hosts, and Networks <a href="http://eecs.northwestern.edu/eecs-442" target="_blank">eecs.northwestern.edu/eecs-442</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-161">
+                <td class="ari-tbl-col-0  col_cfcd2084">443</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Operating Systems <a href="http://eecs.northwestern.edu/eecs-443" target="_blank">eecs.northwestern.edu/eecs-443</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-162">
+                <td class="ari-tbl-col-0  col_cfcd2084">450</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Internet Security <a href="http://eecs.northwestern.edu/eecs-450" target="_blank">eecs.northwestern.edu/eecs-450</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">10:30-11:50 MW [Chen]</td>
+            tr>
+    <tr class=" ari-tbl-row-163">
+                <td class="ari-tbl-col-0  col_cfcd2084">452</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Computer Architecture I <a href="http://eecs.northwestern.edu/eecs-452" target="_blank">eecs.northwestern.edu/eecs-452</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">12:30-1:50 MW [G. Memik]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-164">
+                <td class="ari-tbl-col-0  col_cfcd2084">453</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Parallel Architectures <a href="http://eecs.northwestern.edu/eecs-453" target="_blank">eecs.northwestern.edu/eecs-453</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">3:30-4:50 MW (Joseph)</td>
+            </tr>
+    <tr class=" ari-tbl-row-165">
+                <td class="ari-tbl-col-0  col_cfcd2084">454</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Communication Networks <a href="http://eecs.northwestern.edu/eecs-454" target="_blank">eecs.northwestern.edu/eecs-454</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-166">
+                <td class="ari-tbl-col-0  col_cfcd2084">455</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Distributed Computing Systems <a href="http://eecs.northwestern.edu/eecs-455" target="_blank">eecs.northwestern.edu/eecs-455</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-167">
+                <td class="ari-tbl-col-0  col_cfcd2084">457</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Algorithms <a href="http://eecs.northwestern.edu/eecs-457" target="_blank">eecs.northwestern.edu/eecs-457</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-168">
+                <td class="ari-tbl-col-0  col_cfcd2084">458</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Parallel Algorithms for VLSI Computer-Aided Design <a href="http://eecs.northwestern.edu/eecs-458" target="_blank">eecs.northwestern.edu/eecs-458</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-169">
+                <td class="ari-tbl-col-0  col_cfcd2084">459</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">VLSI Algorithmics <a href="http://eecs.northwestern.edu/eecs-459" target="_blank">eecs.northwestern.edu/eecs-459</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:30 MW [S. Memik]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-170">
+                <td class="ari-tbl-col-0  col_cfcd2084">463</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Adaptive Filters <a href="http://eecs.northwestern.edu/eecs-463" target="_blank">eecs.northwestern.edu/eecs-463</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">2-3:20 TuTh [Honig]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-171">
+                <td class="ari-tbl-col-0  col_cfcd2084">472</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Designing and Constructing Models with Multi-Agent Languages <a href="http://eecs.northwestern.edu/eecs-472" target="_blank">eecs.northwestern.edu/eecs-472</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-172">
+                <td class="ari-tbl-col-0  col_cfcd2084">473-1</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">NUvention: Web <a href="http://eecs.northwestern.edu/eecs-473-1" target="_blank">eecs.northwestern.edu/eecs-473-1</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">12:25-3:25 Tu [Marasco/Warren]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-173">
+                <td class="ari-tbl-col-0  col_cfcd2084">473-2</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">NUvention: Web <a href="http://eecs.northwestern.edu/eecs-473-2" target="_blank">eecs.northwestern.edu/eecs-473-2</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">12:15-3:25 Tu [Marasco/Warren]</td>
+            </tr>
+    <tr class=" ari-tbl-row-174">
+                <td class="ari-tbl-col-0  col_cfcd2084">478</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Advanced Digital Communications <a href="http://eecs.northwestern.edu/eecs-478" target="_blank">eecs.northwestern.edu/eecs-478</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-175">
+                <td class="ari-tbl-col-0  col_cfcd2084">479</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Nonlinear Optimization <a href="http://eecs.northwestern.edu/eecs-479" target="_blank">eecs.northwestern.edu/eecs-479</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-176">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Comp. Auditory Scene Analysis <a href="http://eecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis" target="_blank">eecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">4-7 W [Pardo]</td>
+            </tr>
+    <tr class=" ari-tbl-row-177">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Nonlinear Control Theory <a href="http://eecs.northwestern.edu/eecs-495-introduction-to-nonlinear-control-theory" target="_blank">eecs.northwestern.edu/eecs-495-introduction-to-nonlinear-control-theory</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">2-3:20 TuTh [Freeman]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-178">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Machine Learning and Artificial Intelligence for Robotics <a href="http://eecs.northwestern.edu/eecs-495-machine-learning-and-artificial-intelligence-for-robotics" target="_blank">eecs.northwestern.edu/eecs-495-machine-learning-and-artificial-intelligence-for-robotics</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-179">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Probabilistic Systems and Random Signals <a href="http://eecs.northwestern.edu/eecs-495-probabilistic-systems-and-random-signals" target="_blank">eecs.northwestern.edu/eecs-495-probabilistic-systems-and-random-signals</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">9-9:50 MTuWF [Plonus]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-180">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Qualitative Representations <a href="http://eecs.northwestern.edu/course-list/577-eecs-495-qualitative-representations" target="_blank">eecs.northwestern.edu/course-list/577-eecs-495-qualitative-representations</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">2-5 M [Forbus]</td>
+            </tr>
+    <tr class=" ari-tbl-row-181">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Stochastic Models for Web <a href="http://2.0" target="_blank">2.0</a> <a href="http://eecs.northwestern.edu/eecs-495-stochastic-models-for-web-2-0" target="_blank">eecs.northwestern.edu/eecs-495-stochastic-models-for-web-2-0</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-182">
+                <td class="ari-tbl-col-0  col_cfcd2084">495</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Sparse and Low-Rank Recovery Problems in Machine Learning <a href="http://eecs.northwestern.edu/eecs-495-sparse-and-low-rank-recovery-problems-in-machine-learning" target="_blank">eecs.northwestern.edu/eecs-495-sparse-and-low-rank-recovery-problems-in-machine-learning</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e">10:00-10:50 MWF [Katsaggelos / Watt]</td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-183">
+                <td class="ari-tbl-col-0  col_cfcd2084">510</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Social Media Mining <a href="http://eecs.northwestern.edu/course-list/578-eecs-510-seminar-tba-choudary" target="_blank">eecs.northwestern.edu/course-list/578-eecs-510-seminar-tba-choudary</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d"></td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679">12:30-1:50 TuTh [Choudhary]</td>
+            </tr>
+    <tr class=" ari-tbl-row-184">
+                <td class="ari-tbl-col-0  col_cfcd2084">207 CogSci</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Cognitive Modeling <a href="http://www.cs.northwestern.edu/~forbus/cogsci207/overview.htm" target="_blank">www.cs.northwestern.edu/~forbus/cogsci207/overview.htm</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">12:30-1:50 TuTh [Forbus]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    <tr class=" ari-tbl-row-185">
+                <td class="ari-tbl-col-0  col_cfcd2084">325 BME</td>
+                <td class="ari-tbl-col-1  col_c4ca4238">Introduction to Medical Imaging <a href="http://www.bme.northwestern.edu/courses/descriptions/325.html" target="_blank">www.bme.northwestern.edu/courses/descriptions/325.html</a></td>
+                <td class="ari-tbl-col-2  col_c81e728d">11-11:50 MWF [Sahakian]</td>
+                <td class="ari-tbl-col-3  col_eccbc87e"></td>
+                <td class="ari-tbl-col-4  col_a87ff679"></td>
+            </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+    <th class="ari-tbl-col-0  col_cfcd2084">Course #</th>
+    <th class="ari-tbl-col-1  col_c4ca4238">Course Title</th>
+    <th class="ari-tbl-col-2  col_c81e728d">Fall 2013</th>
+    <th class="ari-tbl-col-3  col_eccbc87e">Winter 2014</th>
+    <th class="ari-tbl-col-4  col_a87ff679">Spring 2014</th>
+</tr>   </tfoot>
+</table>
+</div>
 
-        <h1 class="section">Our Office</h1>
 
-        <h3>Located in beautiful Madison, Wisconsin</h3>
 
-        <div id="office-images">
-            <img src="http://placehold.it/800x533">
-            <img src="http://placehold.it/800x533">
-            <img src="http://placehold.it/800x533">
-            <img src="http://placehold.it/800x533">
-            <!--
-            <img src="http://drifty.com/jobs/images/office2.jpg">
-            <img src="http://drifty.com/jobs/images/office3.jpg">
-            <img src="http://drifty.com/jobs/images/office4.jpg">
-            <img src="http://drifty.com/jobs/images/office5.jpg">
-            -->
-        </div>
+   
+<script>
+    $(function () {
+        $('table').footable();
+    });
+</script>
 
-        <h1 id="job-openings" class="section">Open Positions</h1>
-        <div id="jobs">
-            <ul>
-                <!--<li>January 2014 - <a href="/jobs/framework-dev-2014.html">Framework Developer (REMOTE OKAY!)</a></li>-->
-                <li>February 2014 - <a href="http://drifty.com/jobs/evangelist-2014.html">Developer Evangelist (REMOTE OKAY!)</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <footer id="footer" class="flow">
-        <div class="container">
-        
-            <div class="left">
-            If you are interested in
-            <strong>supporting or sponsoring us</strong>, please email:
-            <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wic@u.northwestern.edu&subject=[WiC]"> wic{at}u.nor...ern.edu</a>.
-                <!--
-                From our blog: <a href="http://blog.drifty.com/2013/09/you-dont-get-our-bootstrapped-company/">You Don’t ‘Get’ Our Bootstrapped Company</a>
-                -->
-            </div>
-
-            <div class="right">
-            <a href="http://fb.com/nuwic" title="fb.com/nuwic" target="_blank"><span class="fa-stack fa-lg"> <i class="fa fa-circle fa-stack-2x social"></i> <i class="fa fa-facebook fa-stack-1x fa-inverse"></i> </span> 
-            </a>
-                <!--a href="http://twitter.com/driftyco" target="_blank">
-                    <div id="twitter-logo"></div>
-                </a-->
-                <a href="http://twitter.com/nuwic" title="@nuwic twitter" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x social"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
-            </a>
-                <!--a href="http://plus.google.com/b/103225943287966764137/103225943287966764137/posts" target="_blank">
-                    <div id="gplus-logo"></div>
-                </a>
-                -->
-            </div>
-        </div>
-    </footer>
-
+http://fooplugins.com/plugins/footable-jquery/#/
 </body>
-
 </html>
