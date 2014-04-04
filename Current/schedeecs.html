@@ -1,3 +1,1443 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset=utf-8>
+    <title>How can AngularJS bind to list of checkbox values?</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h4><a href="http://stackoverflow.com/q/14514461/697154">How can AngularJS bind to list of checkbox values?</a></h4>
+      </div>
+
+      <div ng-controller="ObjectArrayCtrl">
+        <h3>With an object array as input data</h3>
+ 
+        
+    <h4>selectables</h4>
+    
+    <div class="form-group">
+      <label ng-repeat="c in fruits" class="checkbox-inline">
+  <!--
+    - use `ng-model="fruit.selected"` to utilize two-way-data-binding. The property name '.selected' is arbitrary and could be anything and will be created on the object if not present.
+  -->
+  <input type="checkbox" name="selectedFruits[]" value="{{c.courseTitle}}" ng-model="c.selected"> {{c.courseNum}}
+</label>      
+            </div>
+        
+        
+
+        
+          
+            
+<!--h4>helper function selection</h4>
+<pre>{{fruits|fruitSelection|json}}</pre>
+
+<!--h4>default filter selection</h4>
+<pre>{{fruits|filter:{selected:true}|json}}</pre-->
+
+<h4>helper function selection</h4>
+<pre>{{selectedFruits()|json}}</pre>
+</div>
+
+        <hr>
+
+<h4>input</h4>
+<!--pre>{{fruits|json}}</pre-->          
+          
+      <script>
+        
+        (function (app) {
+  'use strict';
+  
+  app.controller('ObjectArrayCtrl', ['$scope', 'filterFilter', function ObjectArrayCtrl($scope, filterFilter) {
+    // fruits
+
+   /*    $scope.fruits = [
+      { name: 'apple',    selected: true },
+      { name: 'orange',   selected: false },
+      { name: 'pear',     selected: true },
+      { name: 'naartjie', selected: false }
+    ];*/
+    
+    // Code goes here
+
+//$scope.courses = [
+$scope.fruits = [
+{
+    "courseNum":"380",
+    "courseTitle":"Wireless Communications eecs.northwestern.edu/eecs-380",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Web Information Retrieval and Extraction (Downey)eecs.northwestern.edu/eecs-395-495-web-information-retrieval-and-extraction",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"392",
+    "courseTitle":"VLSI Systems Design Projectseecs.northwestern.edu/eecs-392",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"12:30-1:50 TuTh [Ilya Mikhelson]"
+  },
+  {
+    "courseNum":"391",
+    "courseTitle":"VLSI Systems Design eecs.northwestern.edu/eecs-391",
+    "fall-13":"",
+    "winter-14":"9:30-10:50 TuTh [Mikhelson]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"459",
+    "courseTitle":"VLSI Algorithmics eecs.northwestern.edu/eecs-459",
+    "fall-13":"",
+    "winter-14":"2-3:30 MW [S. Memik]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"130",
+    "courseTitle":"Tools and Technology of the World Wide Webeecs.northwestern.edu/eecs-130",
+    "fall-13":"11-12:20 TuTh [Gemmel]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"The Probabilistic Method eecs.northwestern.edu/eecs-395-495-the-probabilistic-method",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"The Art of Multicore Concurrent Programmingeecs.northwestern.edu/eecs-395-495-art-of-multicore-concurrent-programming",
+    "fall-13":"2-3:20 TuTh [H. Zhou]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"313",
+    "courseTitle":"Telecommunication Networks for Multimediaeecs.northwestern.edu/eecs-313",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Technology Infrastructure: Concepts, Requirements, Design and Operation eecs.northwestern.edu/eecs-395-495-technology-infrastructure-concepts-requirements-design-and-operation",
+    "fall-13":"10-10:50 MWF [Rahimi]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395",
+    "courseTitle":"TBA (C. Liu) eecs.northwestern.edu/eecs-395-c-liu",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"9-9:50 MWF [C. Liu]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Tangible Interaction Design and Learning (Horn)eecs.northwestern.edu/eecs-395-495-lrn-sci-451-tangible-interaction-design-and-learning-horn",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"1-4 W [Horn]"
+  },
+  {
+    "courseNum":"410",
+    "courseTitle":"System Theory eecs.northwestern.edu/eecs-410",
+    "fall-13":"11-11:50 MWF [Butz]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"389",
+    "courseTitle":"Superconductivity and its Applicationseecs.northwestern.edu/eecs-389",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"2-3:20 TuTh [Aydin]"
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Stochastic Models for Web 2.0eecs.northwestern.edu/eecs-495-stochastic-models-for-web-2-0",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Special Relativity in Optics eecs.northwestern.edu/eecs-395-495-special-relativity-in-optics",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Sparse and Low-Rank Recovery Problems in Machine Learning eecs.northwestern.edu/eecs-495-sparse-and-low-rank-recovery-problems-in-machine-learning",
+    "fall-13":"",
+    "winter-14":"10:00-10:50 MWF [Katsaggelos / Watt]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"384",
+    "courseTitle":"Solid State Electronic Deviceseecs.northwestern.edu/eecs-384",
+    "fall-13":"2-3:20 TuTh [Grayson]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"394",
+    "courseTitle":"Software Project Management & Developmenteecs.northwestern.edu/eecs-394",
+    "fall-13":"10-10:50 MWF [Riesbeck]",
+    "winter-14":"",
+    "spring-14":"11-12:20 TuTh [Riesbeck]"
+  },
+  {
+    "courseNum":"510",
+    "courseTitle":"Social Media Mining eecs.northwestern.edu/course-list/578-eecs-510-seminar-tba-choudary",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"12:30-1:50 TuTh [Choudhary]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Simulation-Based Virtual Characters for Interactive Entertainment eecs.northwestern.edu/eecs-395-495-simulation-based-virtual-characters-for-interactive-entertainment",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"426",
+    "courseTitle":"Signal Detection and Estimationeecs.northwestern.edu/eecs-426",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 MW [CC Lee]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"429",
+    "courseTitle":"Selected Topics in Quantum Information Science and Technology eecs.northwestern.edu/eecs-429",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"4-5:20 MW [Yuen]"
+  },
+  {
+    "courseNum":"441",
+    "courseTitle":"Resource Virtualization eecs.northwestern.edu/eecs-441",
+    "fall-13":"",
+    "winter-14":"9:30-11 TuTh [Dinda]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"423",
+    "courseTitle":"Random Processes in Communications and Control IIeecs.northwestern.edu/eecs-423",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"422",
+    "courseTitle":"Random Processes in Comm. and Control Ieecs.northwestern.edu/eecs-422",
+    "fall-13":"",
+    "winter-14":"3:30-5:20 TuTh [Berry]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"403",
+    "courseTitle":"Quantum Semiconductors eecs.northwestern.edu/eecs-403",
+    "fall-13":"",
+    "winter-14":"2-3:20 TuTh [Grayson]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"425",
+    "courseTitle":"Quantum Electronics II: Noise, Modulation, and Quantum Properties of Laser Emissionseecs.northwestern.edu/eecs-425",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"404",
+    "courseTitle":"Quantum Electronics eecs.northwestern.edu/eecs-404",
+    "fall-13":"3:30-4:50 MW [Shahriar]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Qualitative Representationseecs.northwestern.edu/course-list/577-eecs-495-qualitative-representations",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"2-5 M [Forbus]"
+  },
+  {
+    "courseNum":"368/468",
+    "courseTitle":"Programming Massively Parallel Processors with CUDAeecs.northwestern.edu/eecs-368468",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 TuTh [Hardavellas]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Programming Languages Seminareecs.northwestern.edu/eecs-395-495-programming-languages-seminar",
+    "fall-13":"12:30-1:50 TuTh [Findler]",
+    "winter-14":"",
+    "spring-14":""
+  },
+
+  {
+    "courseNum":"321",
+    "courseTitle":"Programming Languages eecs.northwestern.edu/eecs-321",
+    "fall-13":"",
+    "winter-14":"2-3:20 MF [Findler]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"230",
+    "courseTitle":"Programming for Engineers eecs.northwestern.edu/eecs-230",
+    "fall-13":"",
+    "winter-14":"1-1:50 MTuWF [Hendrix]",
+    "spring-14":"1-1:50 MTuWF [Trajcevski]"
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Probabilistic Systems and Random Signalseecs.northwestern.edu/eecs-495-probabilistic-systems-and-random-signals",
+    "fall-13":"9-9:50 MTuWF [Plonus]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"302",
+    "courseTitle":"Probabilistic Systems and Random Signalseecs.northwestern.edu/eecs-302",
+    "fall-13":"9-9:50 MTuWF [Plonus]",
+    "winter-14":"",
+    "spring-14":"10-10:50 MTuWF [Subramanian]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Probabilistic Graphical Modelseecs.northwestern.edu/eecs-395-495-probabilistic-graphical-models",
+    "fall-13":"3:30-4:50 TuTh [Downey]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"338",
+    "courseTitle":"Practicum in Intelligent Information Systemseecs.northwestern.edu/eecs-338",
+    "fall-13":"11-12:20 MW [Birnbaum]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"250",
+    "courseTitle":"Physical Electronics and Deiceseecs.northwestern.edu/eecs-250",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"382",
+    "courseTitle":"Photonic Information Processingeecs.northwestern.edu/eecs-382",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"2-3:20 MW [Yuen]"
+  },
+  {
+    "courseNum":"453",
+    "courseTitle":"Parallel Architectures eecs.northwestern.edu/eecs-453",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 MW (Joseph)"
+  },
+  {
+    "courseNum":"458",
+    "courseTitle":"Parallel Algorithms for VLSI Computer-Aided Designeecs.northwestern.edu/eecs-458",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"385",
+    "courseTitle":"Optoelectronics eecs.northwestern.edu/eecs-385",
+    "fall-13":"",
+    "winter-14":"11-11:50 MWF [Aydin]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"427",
+    "courseTitle":"Optical Communications eecs.northwestern.edu/eecs-427",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 MW [Yuen]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"343",
+    "courseTitle":"Operating Systems eecs.northwestern.edu/eecs-343",
+    "fall-13":"11-12:20 TuTh [Bustamante]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Online Advertising: A Systems Approach (Kuzmanovic)eecs.northwestern.edu/eecs-395-495-online-advertising-a-systems-approach",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Object-Oriented Languages and Environmentseecs.northwestern.edu/eecs-395-495-object-oriented-languages-and-environments",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"473-2",
+    "courseTitle":"NUvention: Web eecs.northwestern.edu/eecs-473-2",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"12:15-3:25 Tu [Marasco/Warren]"
+  },
+  {
+    "courseNum":"473-1",
+    "courseTitle":"NUvention: Web eecs.northwestern.edu/eecs-473-1",
+    "fall-13":"",
+    "winter-14":"12:25-3:25 Tu [Marasco/Warren]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"328",
+    "courseTitle":"Numerical Methods for Engineerseecs.northwestern.edu/eecs-328",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"479",
+    "courseTitle":"Nonlinear Optimization eecs.northwestern.edu/eecs-479",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"406",
+    "courseTitle":"Nonlinear Optics eecs.northwestern.edu/eecs-406",
+    "fall-13":"",
+    "winter-14":"11-12:20 TuTh [Y. Huang]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"435",
+    "courseTitle":"Neural Networks eecs.northwestern.edu/eecs-435",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Networking Problems in Cloud Computingeecs.northwestern.edu/eecs-395-495-networking-problems-in-cloud-computing",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"12:30-1:50 MW [Kuzmanovic]"
+  },
+  {
+    "courseNum":"354",
+    "courseTitle":"Network Penetration and Securityeecs.northwestern.edu/eecs-354",
+    "fall-13":"11-12:20 WF [Chen]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"388",
+    "courseTitle":"Nanotechnology eecs.northwestern.edu/eecs-388",
+    "fall-13":"",
+    "winter-14":"9:30-10:50 TuTh [Razeghi]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"421",
+    "courseTitle":"Multimedia Signal Processing eecs.northwestern.edu/eecs-421",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Mixed Signal Circuits Systemseecs.northwestern.edu/eecs-395-495-mixed-signal-circuits-systems",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"347-2",
+    "courseTitle":"Microprocessor Systems Project IIeecs.northwestern.edu/eecs-347-2",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"9-9:50 MWF [Henschen]"
+  },
+  {
+    "courseNum":"347",
+    "courseTitle":"Microprocessor Systems Project Ieecs.northwestern.edu/eecs-347-1",
+    "fall-13":"",
+    "winter-14":"9-9:50 MWF [Henschen]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"346",
+    "courseTitle":"Microprocessor System Designeecs.northwestern.edu/eecs-346",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"10-10:50 MTuWF [Henschen]"
+  },
+  {
+    "courseNum":"212 (310)",
+    "courseTitle":"Mathematical Foundations of Computer Scienceeecs.northwestern.edu/eecs-212",
+    "fall-13":"11-12:20 TuTh [Hendrix]",
+    "winter-14":"11-11:50 MWF [Rahimi]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"352",
+    "courseTitle":"Machine Perception of Music & Audioeecs.northwestern.edu/eecs-352",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 MW [Pardo]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Machine Learning and Artificial Intelligence for Roboticseecs.northwestern.edu/eecs-495-machine-learning-and-artificial-intelligence-for-robotics",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"349",
+    "courseTitle":"Machine Learning eecs.northwestern.edu/eecs-349",
+    "fall-13":"1-1:50 MWF [Pardo]",
+    "winter-14":"2-2:50 MWF [Downey]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"371",
+    "courseTitle":"Knowledge Representation and Reasoningeecs.northwestern.edu/eecs-371",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 TuTh [Forbus]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"357",
+    "courseTitle":"Introduction to VLSI CAD eecs.northwestern.edu/eecs-357",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 TuTh [Zhou]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"369",
+    "courseTitle":"Introduction to Sensor Networkseecs.northwestern.edu/eecs-369",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 MW [Trajcevski / Scheuermann]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"295",
+    "courseTitle":"Introduction to Robotics Laboratoryeecs.northwestern.edu/eecs-295",
+    "fall-13":"",
+    "winter-14":"3:00-4:50 TuTh [Argall]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Introduction to Nonlinear Control Theoryeecs.northwestern.edu/eecs-495-introduction-to-nonlinear-control-theory",
+    "fall-13":"2-3:20 TuTh [Freeman]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"325 BME",
+    "courseTitle":"Introduction to Medical Imagingwww.bme.northwestern.edu/courses/descriptions/325.html",
+    "fall-13":"11-11:50 MWF [Sahakian]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"360",
+    "courseTitle":"Introduction to Feedback Systemseecs.northwestern.edu/eecs-360",
+    "fall-13":"",
+    "winter-14":"10-10:50 MWF [Freeman]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Introduction to Cryptography eecs.northwestern.edu/eecs-395-495-introduction-to-cryptography",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"334",
+    "courseTitle":"Introduction to Computer Visioneecs.northwestern.edu/eecs-334",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"350",
+    "courseTitle":"Introduction to Computer Securityeecs.northwestern.edu/eecs-350",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"340",
+    "courseTitle":"Introduction to Computer Networkingeecs.northwestern.edu/eecs-340",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 WF [Chen]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Introduction to Computational Photographyeecs.northwestern.edu/eecs-395-495-introduction-to-computational-photography",
+    "fall-13":"3:30-4:50 TuTh [Cossairt]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"207 CogSci",
+    "courseTitle":"Introduction to Cognitive Modelingwww.cs.northwestern.edu/~forbus/cogsci207/overview.htm",
+    "fall-13":"12:30-1:50 TuTh [Forbus]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"335",
+    "courseTitle":"Intro to the Theory of Computationeecs.northwestern.edu/eecs-335",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:45 MW [Kao]"
+  },
+  {
+    "courseNum":"337",
+    "courseTitle":"Intro to Semantic Information Processingeecs.northwestern.edu/eecs-337",
+    "fall-13":"",
+    "winter-14":"9:30-10:50 TuTh [Birnbaum]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"390",
+    "courseTitle":"Intro to Robotics eecs.northwestern.edu/eecs-390",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"2-2:50 MWF [C-H Wu]"
+  },
+  {
+    "courseNum":"358",
+    "courseTitle":"Intro to Parallel Computing eecs.northwestern.edu/eecs-358",
+    "fall-13":"",
+    "winter-14":"2-3:20 TuTh [G. Memik]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"379",
+    "courseTitle":"Intro to Lasers and Fiber Opticseecs.northwestern.edu/eecs-379",
+    "fall-13":"12:30-1:50 TuTh [Kanter]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"202",
+    "courseTitle":"Intro to Electrical Engineering eecs.northwestern.edu/eecs-202",
+    "fall-13":"2-2:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]",
+    "winter-14":"10-10:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]",
+    "spring-14":"10-10:50 MTuWF [Taflove/Shahriar/ Grayson/Mohseni/Butz]"
+  },
+  {
+    "courseNum":"374",
+    "courseTitle":"Intro to Digital Control eecs.northwestern.edu/eecs-374",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 MW [Freeman]"
+  },
+  {
+    "courseNum":"339",
+    "courseTitle":"Intro to Databases eecs.northwestern.edu/eecs-339",
+    "fall-13":"4-4:50 MWF [Dinda]",
+    "winter-14":"2-3:20 TuTh [Trajcevski]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"120",
+    "courseTitle":"Intro to Computers & Info Technologyeecs.northwestern.edu/eecs-120",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"213",
+    "courseTitle":"Intro to Computer Systems eecs.northwestern.edu/eecs-213",
+    "fall-13":"2-3:20 TuTh [Hardavellas]",
+    "winter-14":"",
+    "spring-14":"2-3:20 TuTh [Dinda]"
+  },
+  {
+    "courseNum":"110",
+    "courseTitle":"Intro to Computer Programmingeecs.northwestern.edu/eecs-110",
+    "fall-13":"10-10:50 MTuWF \"C\" [Tumblin]",
+    "winter-14":"10-10:50 MTuWF \"Python\" [Cossairt]",
+    "spring-14":"10-10:50 MTuWF \"Python\" [Kuzmanovic]"
+  },
+  {
+    "courseNum":"351",
+    "courseTitle":"Intro to Computer Graphics eecs.northwestern.edu/eecs-351",
+    "fall-13":"",
+    "winter-14":"10-10:50 MWF [Tumblin]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"203",
+    "courseTitle":"Intro to Computer Engineeringeecs.northwestern.edu/eecs-203",
+    "fall-13":"11-11:50 MTuWF [Joseph]",
+    "winter-14":"11-11:50 MTuWF [CH-Wu]",
+    "spring-14":"11-11:50 MTuWF [Zhou]"
+  },
+  {
+    "courseNum":"333",
+    "courseTitle":"Intro to Communication Networkseecs.northwestern.edu/eecs-333",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"11-12:20 TuTh [Guo]"
+  },
+
+  {
+    "courseNum":"348",
+    "courseTitle":"Intro to Artificial Intelligence eecs.northwestern.edu/eecs-348",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"10-10:50 MWF [Downey]"
+  },
+  {
+    "courseNum":"450",
+    "courseTitle":"Internet Security eecs.northwestern.edu/eecs-450",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"10:30-11:50 MW [Chen]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Intermediate Computer Graphicseecs.northwestern.edu/eecs-395-495-intermediate-computer-graphics",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"9:30-10:50 TuTh [Tumblin]"
+  },
+  {
+    "courseNum":"438",
+    "courseTitle":"Interdisciplinary Nonlinear Dynamicseecs.northwestern.edu/eecs-438",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"428",
+    "courseTitle":"Information Theory eecs.northwestern.edu/eecs-428",
+    "fall-13":"3:30-4:50 MW [Guo]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Human-level Artificial Intelligenceeecs.northwestern.edu/eecs-395-495-human-level-artificial-intelligence",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"431",
+    "courseTitle":"Human Perception and Electronic Mediaeecs.northwestern.edu/eecs-431",
+    "fall-13":"",
+    "winter-14":"9:30-10:50 TuTh [Pappas]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"330",
+    "courseTitle":"Human Computer Interaction eecs.northwestern.edu/eecs-330",
+    "fall-13":"",
+    "winter-14":"1-1:50 MWF [Horn/Zhang]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Geospatial Vision and Visualizationeecs.northwestern.edu/eecs-395-495-geospatial-vision-and-visualization",
+    "fall-13":"",
+    "winter-14":"6-9 Tu [Chen, Xin]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Game Development Studio eecs.northwestern.edu/eecs-395-game-development-studio",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"211 A",
+    "courseTitle":"Fundmentals of Computer Programming IIeecs.northwestern.edu/eecs-211",
+    "fall-13":"1-1:50 MTuWF [Lin]",
+    "winter-14":"2-2:50 MTuWF [Jiang]",
+    "spring-14":"1-1:50 MTuWF [Gemmell]"
+  },
+  {
+    "courseNum":"211 B",
+    "courseTitle":"Fundmentals of Computer Programming IIeecs.northwestern.edu/eecs-211",
+    "fall-13":"",
+    "winter-14":"3-3:50 MTuWF [Hendrix]",
+    "spring-14":"2-2:50 MTuWF [Gemmell]"
+  },
+  {
+    "courseNum":"223",
+    "courseTitle":"Fundamentals of Solid State Engineeringeecs.northwestern.edu/eecs-223",
+    "fall-13":"9-9:50 MTuWF [Razeghi]",
+    "winter-14":"",
+    "spring-14":"9-9:50 MTuWF [Aydin]"
+  },
+  {
+    "courseNum":"222",
+    "courseTitle":"Fundamentals of Signals and Systemseecs.northwestern.edu/eecs-222",
+    "fall-13":"2-2:50 MTuWF [Pappas]",
+    "winter-14":"2-2:50 MTuWF [Katsaggelos]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"225",
+    "courseTitle":"Fundamentals of Electronics eecs.northwestern.edu/eecs-225",
+    "fall-13":"2-2:50 MTuWF [C.H. Wu]",
+    "winter-14":"3-3:50 MTuWF [C.H. Wu]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"401",
+    "courseTitle":"Fundamentals of Electronic Deviceseecs.northwestern.edu/eecs-401",
+    "fall-13":"",
+    "winter-14":"3:30-4:50 TuTh [Mohseni]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"224",
+    "courseTitle":"Fundamentals of Electromagnetics and Photonicseecs.northwestern.edu/eecs-224",
+    "fall-13":"11-11:50 MTuWF [Taflove]",
+    "winter-14":"",
+    "spring-14":"1-1:50 MTuWF [Taflove]"
+  },
+  {
+    "courseNum":"205",
+    "courseTitle":"Fundamentals of Computer System Softwareeecs.northwestern.edu/eecs-205",
+    "fall-13":"4-4:50 MTuWF [Lin]",
+    "winter-14":"2-2:50 MTuWF [Joseph]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"111",
+    "courseTitle":"Fundamentals of Computer Programming Ieecs.northwestern.edu/eecs-111",
+    "fall-13":"12:00-12:50 MWF [Horswill]",
+    "winter-14":"2-2:50 MTuWF [Horswill]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"221",
+    "courseTitle":"Fundamentals of Circuits eecs.northwestern.edu/eecs-221",
+    "fall-13":"",
+    "winter-14":"9-9:50 MTuWF [C. Liu]",
+    "spring-14":"2-2:50 MTuWF [Plonus]"
+  },
+  {
+    "courseNum":"383",
+    "courseTitle":"Fiber-Optic Communications eecs.northwestern.edu/eecs-383",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"205/EA1",
+    "courseTitle":"Engineering Analysis eecs.northwestern.edu/ea1",
+    "fall-13":"9-9:50 MTuWF [Mikhelson]",
+    "winter-14":"9-9:50 MTuWF [Lin]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"205/EA1",
+    "courseTitle":"Engineering Analysis eecs.northwestern.edu/ea1",
+    "fall-13":"10-10:50 MTuWF [Y. Wu]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"205/EA1",
+    "courseTitle":"Engineering Analysis eecs.northwestern.edu/ea1",
+    "fall-13":"11-11:50 MTuWF [Honig]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"205/EA1",
+    "courseTitle":"Engineering Analysis eecs.northwestern.edu/ea1",
+    "fall-13":"12-12:50 MTuWF [Nocedal]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"205/EA1",
+    "courseTitle":"Engineering Analysis (Honors) eecs.northwestern.edu/ea1",
+    "fall-13":"11-11:50 MTuWF [Berry]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"100",
+    "courseTitle":"Electrons, Photons, and Bits: Adventures in Electrical and Computer Engineering eecs.northwestern.edu/eecs-100",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"4-4:50 MTuWF [Taflove]"
+  },
+  {
+    "courseNum":"381",
+    "courseTitle":"Electronic Properties of Materialseecs.northwestern.edu/eecs-381",
+    "fall-13":"1-1:50 MWF [Mohseni]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"442",
+    "courseTitle":"Dynamic Behavior of Applications, Hosts, and Networkseecs.northwestern.edu/eecs-442",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Distributed Systems in Challenging Environmentseecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Distributed Systems in Challenging Environmentseecs.northwestern.edu/eecs-395-495-distributed-systems-in-challenging-environments",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"11-12:20 MW [Bustamante]"
+  },
+  {
+    "courseNum":"345",
+    "courseTitle":"Distributed Systems eecs.northwestern.edu/eecs-345",
+    "fall-13":"",
+    "winter-14":"11-12:20 MW [Bustamante]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"455",
+    "courseTitle":"Distributed Computing Systemseecs.northwestern.edu/eecs-455",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"359",
+    "courseTitle":"Digital Signal Processing eecs.northwestern.edu/eecs-359",
+    "fall-13":"3:30-4:50 TuTh Pappas",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"420",
+    "courseTitle":"Digital Image Processing eecs.northwestern.edu/eecs-420",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"5-8pm W [Katsaggelos]"
+  },
+  {
+    "courseNum":"332",
+    "courseTitle":"Digital Image Analysis eecs.northwestern.edu/eecs-332",
+    "fall-13":"2-3:20 TuTh [Y. Wu]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"363",
+    "courseTitle":"Digital Filtering eecs.northwestern.edu/eecs-363",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"1-1:50 MWF [Butz]"
+  },
+  {
+    "courseNum":"378",
+    "courseTitle":"Digital Communications eecs.northwestern.edu/eecs-378",
+    "fall-13":"",
+    "winter-14":"11-11:50 MWF [C.C. Lee]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"472",
+    "courseTitle":"Designing and Constructing Models with Multi-Agent Languages eecs.northwestern.edu/eecs-472",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"372/472",
+    "courseTitle":"Designing and Constructing Models with Multi-Agent Languages eecs.northwestern.edu/eecs-372472",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"366",
+    "courseTitle":"Designing and Constructing Models with Multi-agent Languages eecs.northwestern.edu/eecs-366",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"106/DTC",
+    "courseTitle":"Design Thinking and Communicationeecs.northwestern.edu/edc",
+    "fall-13":"",
+    "winter-14":"TBA[TBA]",
+    "spring-14":"TBA[Lin]"
+  },
+  {
+    "courseNum":"106/DTC",
+    "courseTitle":"Design Thinking and Communicationeecs.northwestern.edu/edc",
+    "fall-13":"",
+    "winter-14":"TBA[TBA]",
+    "spring-14":"TBA[Lin]"
+  },
+  {
+    "courseNum":"106/DTC",
+    "courseTitle":"Design Thinking and Communicationeecs.northwestern.edu/edc",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"TBA[Grad]"
+  },
+  {
+    "courseNum":"106/DTC",
+    "courseTitle":"Design Thinking and Communicationeecs.northwestern.edu/edc",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"TBA[Grad]"
+  },
+  {
+    "courseNum":"430",
+    "courseTitle":"Design of Interactive Learning Environmentseecs.northwestern.edu/eecs-430",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"393/394",
+    "courseTitle":"Design and Analysis of High-Speed Integrated Circuitseecs.northwestern.edu/eecs-393-493",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"336",
+    "courseTitle":"Design & Analysis of Algorithms(Honors)eecs.northwestern.edu/eecs-336",
+    "fall-13":"3:30-4:50 TuTh [Hartline]",
+    "winter-14":"3:30-4:50 [Kao] TuTh",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Derandomization eecs.northwestern.edu/eecs-395-495-derandomization",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"214 (311)",
+    "courseTitle":"Data Structures and Data Managementeecs.northwestern.edu/eecs-214",
+    "fall-13":"12-12:50 MWF [Scheuermann]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"214B",
+    "courseTitle":"Data Structures and Data Managementeecs.northwestern.edu/eecs-214",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"11-11:50 MWF [Rahimi]"
+  },
+  {
+    "courseNum":"214A",
+    "courseTitle":"Data Structures and Data Managementeecs.northwestern.edu/course-list/668-eecs-214-a-data-structures-and-data-management",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"9-9:50 MWF [Banerjee]"
+  },
+  {
+    "courseNum":"317",
+    "courseTitle":"Data Management and Information Processingeecs.northwestern.edu/eecs-317",
+    "fall-13":"2-2:50 MWF [Trajcevski]",
+    "winter-14":"",
+    "spring-14":"12-12:50 MWF [Hendrix]"
+  },
+  {
+    "courseNum":"370",
+    "courseTitle":"Computer Game Design eecs.northwestern.edu/eecs-370",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"362",
+    "courseTitle":"Computer Architecture Projecteecs.northwestern.edu/eecs-362",
+    "fall-13":"",
+    "winter-14":"11-12:20 TuTh [Chao Yan and Yuanbo Fan]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"361",
+    "courseTitle":"Computer Architecture I eecs.northwestern.edu/eecs-361",
+    "fall-13":"12:30-1:50 TuTh [G. Memik]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Computational Photography Seminareecs.northwestern.edu/course-list/585-eecs-395-495-computational-photography-seminar",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"1-4 W [Cossairt]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Computational Geometry eecs.northwestern.edu/eecs-395-495-computational-geometry",
+    "fall-13":"4-5:20 MW [Trajcevski]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"386",
+    "courseTitle":"Computational Electromagnetics and Photonicseecs.northwestern.edu/eecs-386",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Computational Auditory Scene Analysiseecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"322",
+    "courseTitle":"Compiler Construction eecs.northwestern.edu/eecs-322",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"2-3:20 MW [Findler]"
+  },
+  {
+    "courseNum":"495",
+    "courseTitle":"Comp. Auditory Scene Analysiseecs.northwestern.edu/eecs-395-495-computational-auditory-scene-analysis",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"4-7 W [Pardo]"
+  },
+  {
+    "courseNum":"307",
+    "courseTitle":"Communications Systems eecs.northwestern.edu/eecs-307",
+    "fall-13":"10-10:50 MTuWF [C.C. Lee]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Collaboration Technology eecs.northwestern.edu/eecs-395-495-collaboration-technology",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Cognitive Simulation for Virtual Characterseecs.northwestern.edu/eecs-395-495-cognitive-simulation-for-virtual-characters",
+    "fall-13":"4-4:50 MWF [Horswill]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Cardiovascular Instrumentationeecs.northwestern.edu/eecs-395-495-cardiovascular-instrumentation",
+    "fall-13":"",
+    "winter-14":"1-1:50 MWF [Sahakian]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Bioinformatics (Kao) eecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"355",
+    "courseTitle":"Asic and FPGA Design eecs.northwestern.edu/eecs-355",
+    "fall-13":"",
+    "winter-14":"11-11:50 MWF [S. Memik]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"325",
+    "courseTitle":"Artificial Intelligence Prog. eecs.northwestern.edu/eecs-325",
+    "fall-13":"12:30-1:50 MW [Riesbeck]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"101",
+    "courseTitle":"An Intro to Computer Science for Everyoneeecs.northwestern.edu/eecs-101",
+    "fall-13":"3:00-3:50 MWF [H. Zhang]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Algorithmic Techniques for Bioinformationeecs.northwestern.edu/eecs-395-495-algorithmic-techniques-for-bioinformatics",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 TuTh [Kao]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Algorithmic Mechanism Designeecs.northwestern.edu/eecs-395-495-algorithmic-mechanism-design",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Algorithmic DNA Self-Assembly (Kao)eecs.northwestern.edu/eecs-395-495-algorithmic-dna-self-assembly-kao",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Algorithmic and Economic Aspects of Social Networkseecs.northwestern.edu/eecs-395-algorithmic-and-economic-aspects-of-social-networks",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"Advanced Quantum Transport & Magneto Transporteecs.northwestern.edu/course-list/644-eecs-395-495-advanced-quantum-transport-magneto-transport",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"11-12:20 TuTh [Grayson]"
+  },
+  {
+    "courseNum":"405",
+    "courseTitle":"Advanced Photonics eecs.northwestern.edu/eecs-405",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 TuTh [Mohseni]"
+  },
+  {
+    "courseNum":"443",
+    "courseTitle":"Advanced Operating Systemseecs.northwestern.edu/eecs-443",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"440",
+    "courseTitle":"Advanced Networking eecs.northwestern.edu/eecs-440",
+    "fall-13":"11-12:20TuTh [Kuzmanovic]",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"402",
+    "courseTitle":"Advanced Electronic Deviceseecs.northwestern.edu/eecs-402",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"418",
+    "courseTitle":"Advanced Digital Signal Processingeecs.northwestern.edu/eecs-418",
+    "fall-13":"",
+    "winter-14":"1-1:50 MWF [Butz]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"303",
+    "courseTitle":"Advanced Digital Logic Designeecs.northwestern.edu/eecs-303",
+    "fall-13":"3:30-4:50 TuTh [Ogrenci Memik]",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 TuTh [Mikhelson]"
+  },
+  {
+    "courseNum":"478",
+    "courseTitle":"Advanced Digital Communicationseecs.northwestern.edu/eecs-478",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"432",
+    "courseTitle":"Advanced Computer Vision eecs.northwestern.edu/eecs-432",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+
+  {
+    "courseNum":"452",
+    "courseTitle":"Advanced Computer Architecture Ieecs.northwestern.edu/eecs-452",
+    "fall-13":"",
+    "winter-14":"12:30-1:50 MW [G. Memik]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"454",
+    "courseTitle":"Advanced Communication Networkseecs.northwestern.edu/eecs-454",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"457",
+    "courseTitle":"Advanced Algorithms eecs.northwestern.edu/eecs-457",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"463",
+    "courseTitle":"Adaptive Filters eecs.northwestern.edu/eecs-463",
+    "fall-13":"",
+    "winter-14":"2-3:20 TuTh [Honig]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"A Hands-on Course in Communication Systemseecs.northwestern.edu/eecs-395-495-a-hands-on-course-in-communication-systems",
+    "fall-13":"",
+    "winter-14":"2-3:30 MW [Guo]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Special Topics) Innovation in Journalism & Technologyeecs.northwestern.edu/eecs-395-495-special-topics-innovation-in-journalism-technology",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"6-9 W [Birnbaum]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Special Topics) Embedded Systemseecs.northwestern.edu/eecs-395-495-special-topics-embedded-systems",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3-6 Tu [Henschen, J. Lee]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Special Topics) Computational Complexityeecs.northwestern.edu/eecs-395-495-special-topics-computational-complexity",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Advanced Topics in) Quantum Electronicseecs.northwestern.edu/eecs-395-495-advanced-topics-in-quantum-electronics",
+    "fall-13":"",
+    "winter-14":"2-3:30 MW [Shahriar]",
+    "spring-14":""
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Advanced Topics in) Computer Architectureeecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":"3:30-4:50 TuTh [Hardavellas]"
+  },
+  {
+    "courseNum":"395/495",
+    "courseTitle":"(Advanced Topics in) Computer Architectureeecs.northwestern.edu/eecs-395-495-advanced-topics-in-computer-architecture",
+    "fall-13":"",
+    "winter-14":"",
+    "spring-14":""
+  },
+  {
+    "courseNum":"courseNum",
+    "courseTitle":"courseTitle",
+    "fall-13":"fall-13",
+    "winter-14":"winter-14",
+    "spring-14":"spring-14"
+  }
+];
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // selected fruits
+    $scope.selection = [];
+    
+    // helper method
+    $scope.selectedFruits = function selectedFruits() {
+      return filterFilter($scope.fruits, { selected: true });
+    };
+    
+    
+    
+    
+    // watch fruits for changes
+    $scope.$watch('fruits|filter:{selected:true}', function (nv) {
+      $scope.selection = nv.map(function (fruit) {
+        return fruit.courseNum; //fruit.name;
+      });
+    }, true);
+  }]);
+  
+  
+  
+  
+  /**
+   * custom filter
+   */
+  app.filter('fruitSelection', ['filterFilter', function (filterFilter) {
+    return function fruitSelection(input, prop) {
+      return filterFilter(input, { selected: true }).map(function (fruit) {
+        return fruit[prop];
+      });
+    };
+  }]);
+})(angular.module('app', []));
+      </script>
+        
+      
+    </div>
+    
+  </body>
+</html>
+
+
+
+
+
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://fooplugins.com/footable/js/footable.js?v=2-0-1" ></script>
 <link href="http://fooplugins.com/footable/css/footable.core.css?v=2-0-1" rel="stylesheet"/>
